@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Burger renders correctly 1`] = `
+Array [
+  <h2
+    className="sc-AxhCb fOWFqp"
+  >
+    Burgers
+  </h2>,
+  <div
+    className="sc-AxjAm cvqGct"
+  >
+    <h3
+      className="sc-AxirZ FzsEO"
+    >
+      amidori - veggie best burger
+    </h3>
+    <img
+      alt="amidori - veggie best burger"
+      className="sc-AxiKw erJOzJ"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Amidori-Veggie-Best-Burger.png"
+    />
+  </div>,
+  <div
+    className="sc-AxjAm cvqGct"
+  >
+    <h3
+      className="sc-AxirZ FzsEO"
+    >
+      followfood - FREI!BURGER
+    </h3>
+    <img
+      alt="followfood - FREI!BURGER"
+      className="sc-AxiKw erJOzJ"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Followfood-Freiburger.png"
+    />
+  </div>,
+  <div
+    className="sc-AxjAm cvqGct"
+  >
+    <h3
+      className="sc-AxirZ FzsEO"
+    >
+      Garden Gourmet - Sensational Burger
+    </h3>
+    <img
+      alt="Garden Gourmet - Sensational Burger"
+      className="sc-AxiKw erJOzJ"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Gourmet-Garden-Vegane-Burger.png"
+    />
+  </div>,
+  <div
+    className="sc-AxjAm cvqGct"
+  >
+    <h3
+      className="sc-AxirZ FzsEO"
+    >
+      Rügenwalder - Mühlen Burger
+    </h3>
+    <img
+      alt="Rügenwalder - Mühlen Burger"
+      className="sc-AxiKw erJOzJ"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Ruegenwalder-Muehlen-Burger.png"
+    />
+  </div>,
+  <div
+    className="sc-AxjAm cvqGct"
+  >
+    <h3
+      className="sc-AxirZ FzsEO"
+    >
+      Rügenwalder - Mühlen Crispyburger
+    </h3>
+    <img
+      alt="Rügenwalder - Mühlen Crispyburger"
+      className="sc-AxiKw erJOzJ"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Ruegenwalder-Muehlen-Crispyburger.png"
+    />
+  </div>,
+  <div
+    className="sc-AxjAm cvqGct"
+  >
+    <h3
+      className="sc-AxirZ FzsEO"
+    >
+      The Vegetarian Butcher - Sieht-Chick-Aus Burger
+    </h3>
+    <img
+      alt="The Vegetarian Butcher - Sieht-Chick-Aus Burger"
+      className="sc-AxiKw erJOzJ"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/The-Vegetarian-Butcher-Vegane-Sieht-Chick-Aus-Burger.png"
+    />
+  </div>,
+  <div
+    className="sc-AxjAm cvqGct"
+  >
+    <h3
+      className="sc-AxirZ FzsEO"
+    >
+      Vivera - Veganer Burger
+    </h3>
+    <img
+      alt="Vivera - Veganer Burger"
+      className="sc-AxiKw erJOzJ"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Vivera-Veganer-Burger.png"
+    />
+  </div>,
+  <div
+    className="sc-AxjAm cvqGct"
+  >
+    <h3
+      className="sc-AxirZ FzsEO"
+    >
+      Wheaty - Vegan Superhero Burger
+    </h3>
+    <img
+      alt="Wheaty - Vegan Superhero Burger"
+      className="sc-AxiKw erJOzJ"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Wheat-Vegan-Superhero-Burger.png"
+    />
+  </div>,
+  <div
+    className="sc-AxjAm cvqGct"
+  >
+    <h3
+      className="sc-AxirZ FzsEO"
+    >
+      Wheaty - Veganer Tex-Mex Burger
+    </h3>
+    <img
+      alt="Wheaty - Veganer Tex-Mex Burger"
+      className="sc-AxiKw erJOzJ"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Wheat-Vegan-Tex-Mex-Burger.png"
+    />
+  </div>,
+]
+`;

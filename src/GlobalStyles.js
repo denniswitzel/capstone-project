@@ -7,7 +7,13 @@ export default createGlobalStyle`
 }
 
 body {
-    margin: 0;
     font-size: 112.5%;
+    background: #F4F4F4;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    margin: 0 auto;
 }
 `

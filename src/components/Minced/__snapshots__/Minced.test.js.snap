@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Minced renders correctly 1`] = `
+Array [
+  <h2
+    className="sc-AxjAm lbYQRu"
+  >
+    Minced
+  </h2>,
+  <div
+    className="sc-AxirZ cKjrym"
+  >
+    <h3
+      className="sc-AxiKw joCwsm"
+    >
+      amidori - veggie minced
+    </h3>
+    <img
+      alt="amidori - veggie minced"
+      className="sc-AxhCb hSNggt"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Amidori-Veggie-Minced.png"
+    />
+  </div>,
+  <div
+    className="sc-AxirZ cKjrym"
+  >
+    <h3
+      className="sc-AxiKw joCwsm"
+    >
+      Farm Way - Veganer Hack
+    </h3>
+    <img
+      alt="Farm Way - Veganer Hack"
+      className="sc-AxhCb hSNggt"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Farm-Way-Veganes-Hack.png"
+    />
+  </div>,
+  <div
+    className="sc-AxirZ cKjrym"
+  >
+    <h3
+      className="sc-AxiKw joCwsm"
+    >
+      Garden Gourmet - Sensational Hack
+    </h3>
+    <img
+      alt="Garden Gourmet - Sensational Hack"
+      className="sc-AxhCb hSNggt"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Garden-Gourmet-Hack.png"
+    />
+  </div>,
+  <div
+    className="sc-AxirZ cKjrym"
+  >
+    <h3
+      className="sc-AxiKw joCwsm"
+    >
+      Like meat - Like Hack
+    </h3>
+    <img
+      alt="Like meat - Like Hack"
+      className="sc-AxhCb hSNggt"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Like-meat-Hack.png"
+    />
+  </div>,
+  <div
+    className="sc-AxirZ cKjrym"
+  >
+    <h3
+      className="sc-AxiKw joCwsm"
+    >
+      Rügenwalder - Veganes Mühlen Hack
+    </h3>
+    <img
+      alt="Rügenwalder - Veganes Mühlen Hack"
+      className="sc-AxhCb hSNggt"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Ruegenwalder-Muehlen-Hack.png"
+    />
+  </div>,
+]
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product renders correctly 1`] = `
+<div
+  className="sc-AxjAm cvqGct"
+>
+  <h3
+    className="sc-AxirZ FzsEO"
+  />
+  <img
+    className="sc-AxiKw erJOzJ"
+  />
+</div>
+`;
