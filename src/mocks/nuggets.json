@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Like meat - Like Nuggets",
+        "ingredients": "Wasser, Panade 23% (Cornflakes (Mais, Salz, Zucker), Maismehl, Maisstärke, Kartoffelstärke, Verdickungsmittel: Xanthan), SOJAPROTEINKONZENTRAT 13%, Sonnenblumenöl, HAFERSPELZFASER (glutenfrei), Salz, Verdickungsmittel: Methylcellulose, natürliches Aroma, Dextrose",
+        "allergies": ["Soja"],
+        "image": "./images/Like-meat-Nuggets.png"
+    },
+    {
+        "title": "Rügenwalder - Vegane Mühlen Nuggets",
+        "ingredients": "Trinkwasser, Weizenmehl, 11% Sojaproteinkonzentrat, Weizengluten, Rapsöl, 4% Sojaproteinisolat, Kochsalz, Verdickungsmittel: Methylcellulose, Branntweinessig, Maismehl, natürliches Aroma, Weizenstärke, Zucker, Gewürze, Traubenzucker, Hefe",
+        "allergies": ["Gluten", "Soja"],
+        "image": "./images/Ruegenwalder-Muehlen-Nuggets.png"
+    },
+    {
+        "title": "The Vegetarian Butcher - Vegane Beflüggel Nuggets",
+        "ingredients": "69% Sojabasis (Trinkwasser, texturiertes SOJAEIWEISS), Cornflakes (Mais, Zucker), Sonnenblumenöl, Mehl (Mais, Reis), HAFERFASER, Rapsöl, natürliche Aromen, Verdickungsmittel (Methylcellulose), Speisesalz, modifizierte Stärke, Stärke, Säuerungsmittel (Citronensäure), Eisendiphosphat, Vitamin B12. Kann Spuren von Milch, Ei und Nüssen enthalten. ¹Im Werk werden auch Milch- und Eiprodukte verarbeitet. Trotz aller Vorkehrungen kann dieses Produkt für MiIch- und Eiallergiker ungeeignet sein",
+        "allergies": ["Gluten", "Soja"],
+        "image": "./images/The-Vegetarian-Butcher-Vegane-Beflüggel-Nuggets.png"
+    },
+    {
+        "title": "Vivera - Vegane Nuggets",
+        "ingredients": "56% rehydriertes SOJA- und WEIZENEIWEIß*, Cornflakes (Mais, Zucker, Salz, GERSTENMALZEXTRAKT), Sonnenblumenöl, Wasser, WEIZENSTÄRKE, Essig, Verdickungsmittel (Methylcellulose), natürliche Aromen, WEIZENMEHL, Meersalz, Zwiebel, Kartoffelfasern, getrockneter Glukosesirup, Salz, Dextrose, Konservierungsstoff (Natriumdiacetat), Maisstärke, Maltodextrin, Kreuzkümmel, Eisen(II)Gluconat, Gewürzextrakt, Kräuterextrakt, Vitamin B12",
+        "allergies": ["Gluten", "Soja"],
+        "image": "./images/Vivera-Vegane-Nuggets.png"
+    }
+]

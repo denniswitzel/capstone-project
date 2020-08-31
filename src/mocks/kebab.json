@@ -1,0 +1,92 @@
+[
+    {
+        "title": "amidori - veggie kebab",
+        "ingredients": "Wasser, Erbsenproteinisolat 31 %, Rapsöl, Tomatenmark, Branntweinessig, Koriander, Paprika geräuchert, Gewürze, Malzextrakt (Wasser, glutenfreies GERSTENRÖSTMALZ, Hopfen, Hefe), Erbsenfaser, glutenfreies HAFERVOLLKORNMEHL, Kartoffelstärke, Apfelessig, Speisesalz, natürliches Aroma, Antioxidationsmittel: Extrakt aus Rosmarin",
+        "allergies": [],
+        "image": "./images/Amidori-Veggie-Kebab.png"
+    },
+    {
+        "title": "amidori - veggie pulled",
+        "ingredients": "Wasser, Erbsenproteinisolat 32 %, Rapsöl, Tomatenmark, Branntweinessig, Thymian, Knoblauchgranulat, Gewürze, glutenfreies HAFERVOLLKORNMEHL, Erbsenfaser, Kartoffelstärke, Speisesalz, Apfelessig, natürliches Aroma, Antioxidationsmittel: Extrakt aus Rosmarin",
+        "allergies": [],
+        "image": "./images/Amidori-Veggie-Pulled.png"
+    },
+    {
+        "title": "Garden Gourmet - Vegane Filet-Stückchen",
+        "ingredients": "Trinkwasser, 31,7 % SOJAPROTEIN, Rapsöl, Branntweinessig, Hefeextrakt, Speisesalz, Aroma",
+        "allergies": ["Soy"],
+        "image": "./images/Garden-Gourmet-Vegane-Filet-Stueckchen.png"
+    },
+    {
+        "title": "Like meat - Like BBQ Chicken",
+        "ingredients": "Wasser, SOJAROTEINKONZENTRAT* 24,9%, Barbecuesauce 19,5% (Zucker*, Wasser, Tomate*, Apfelmus*, konzentrierter Traubenmost*, Weinessig*, geräuchertes Salz (Salz, Rauch), Gewürze (Paprika*, Knoblauch*, Pfeffer*, Chili*)),  Sonnenblumenöl*, natürliches Aroma, Salz, Maltodextrin",
+        "allergies": ["Soy"],
+        "image": "./images/Like-meat-BBQ-Chicken.png"
+    },
+    {
+        "title": "Like meat - Like Chicken",
+        "ingredients": "Wasser, SOJAPROTEINKONZENTRAT* 27%, Sonnenblumenöl*, natürliches Aroma, Salz, Maltodextrin*, Gewürze (Paprika*, Pfeffer*, Ingwer*, Zwiebel*, Muskatnuss*, Muskatblüte*, Kardamom*, Knoblauch*)",
+        "allergies": ["Soy"],
+        "image": "./images/Like-meat-Chicken.png"
+    },
+    {
+        "title": "Like meat - Like Curry Chicken",
+        "ingredients": "Wasser, Erbsenproteinisolat 24%, Erbsenfaser, Marinade 8,4% (Sonnenblumenöl, natürliches Aroma, Gewürze (Bockshornkleesamen, Chili, Kurkuma, Fenchel, Ingwer, Kardamom, Knoblauch, Kreuzkümmel, Koriander, Muskatnuss, Zimt, Zwiebel) Rapsöl, Gewürzextrakte, Salz). Kann Spuren von SOJA enthalten",
+        "allergies": [],
+        "image": "./images/Like-meat-Curry-Chicken.png"
+    },
+    {
+        "title": "Like meat - Like Döner",
+        "ingredients": "Wasser, SOJAPROTEINKONZENTRAT* 26,4%, Marinade 6,2% (Rapsöl*, Gewürze*, Salz, Palmfett*, Dextrose*, Branntweinessig*, Rohrzucker*, Gewürzextrakte, Antioxidationsmittel: Ascorbinsäure), Salz, Maltodextrin*, natürliches Aroma",
+        "allergies": ["Soy"],
+        "image": "./images/Like-meat-Doener.png"
+    },
+    {
+        "title": "Like meat - Like Grilled Chicken",
+        "ingredients": "Wasser, SOJAPROTEINKONZENTRAT* 29,7%, Sonnenblumenöl*, natürliches Aroma, Gewürze 2,6% (Paprika* 71%, Knoblauch*, Petersilie*, Pfeffer*, Rosmarin*, Zwiebel*), Salz, Paprikaextrakt 0,04%, Dextrose*",
+        "allergies": ["Soy"],
+        "image": "./images/Like-meat-Grilled-Chicken.png"
+    },
+    {
+        "title": "Like meat - Like Gyros",
+        "ingredients": "Wasser, SOJAPROTEINKONZENTRAT* 27%, Sonnenblumenöl*, natürliches Aroma, Salz, Maltodextrin*, Gewürze (Paprika*, Pfeffer*, Ingwer*, Zwiebel*, Muskatnuss*, Muskatblüte*, Kardamom*, Knoblauch*)",
+        "allergies": ["Soy"],
+        "image": "./images/Like-meat-Gyros.png"
+    },
+    {
+        "title": "Rügenwalder - Veganes Mühlen Geschnetzeltes Typ Hähnchen",
+        "ingredients": "Trinkwasser, 27% Sojaproteinkonzentrat, Rapsöl, Aroma, Kochsalz, Branntweinessig, Gewürze, Traubenzucker, Schutzkulturen",
+        "allergies": ["Soy"],
+        "image": "./images/Ruegenwalder-Muehlen-Geschnetzeltes.png"
+    },
+    {
+        "title": "The Vegetarian Butcher - Veganes 1001 Geschnetzeltes",
+        "ingredients": "Trinkwasser, 27% Sojaproteinkonzentrat, Rapsöl, Aroma, Kochsalz, Branntweinessig, Gewürze, Traubenzucker, Schutzkulturen",
+        "allergies": ["Soy"],
+        "image": "./images/The-Vegetarian-Butcher-Veganes-1001-Geschnetzeltes.png"
+    },
+    {
+        "title": "Vivera - Veganer Döner Kebab",
+        "ingredients": "88% rehydriertes SOJA-EIWEIß*, Rapsöl, Sonnenblumenöl, Essig, Kräutern und Gewürze, Salz, natürliche Aromen, Gemüse (Paprika, Zwiebel), Wasser, Knoblauch, Maltodextrin, Paprikakonzentrat, Eisen(II) Gluconat, Vitamin B12",
+        "allergies": ["Soy"],
+        "image": "./images/Vivera-Veganer-Doener-Kebab.png"
+    },
+    {
+        "title": "Wheaty - Veganer Döner",
+        "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 84%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Hefeextrakt*, Gewürze* (enthält SELLERIE* und SENF*), Zwiebeln*, Steinsalz, Verdickungsmittel: Johannisbrotkernmehl*",
+        "allergies": ["Gluten"],
+        "image": "./images/Wheaty-Veganer-Doener.png"
+    },
+    {
+        "title": "Wheaty - Veganer Curry",
+        "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 76,8%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Gewürze*, Hefeextrakt*, Steinsalz, Zwiebeln*, Verdickungsmittel: Johannisbrotkernmehl* und Guarkernmehl*.",
+        "allergies": ["Gluten"],
+        "image": "./images/Wheaty-Veganes-Curry.png"
+    },
+    {
+        "title": "Wheaty - Veganes Gyros",
+        "ingredients": "(Wasser, WEIZENeiweiß*) 78%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Zwiebeln*, Gewürze* (enthält SELLERIE* und SENF*), Steinsalz, Hefeextrakt*, Verdickungsmittel: Johannisbrotkernmehl*",
+        "allergies": ["Gluten"],
+        "image": "./images/Wheaty-Veganes-Gyros.png"
+    }
+]
