@@ -13,6 +13,7 @@ const HeadlineStyled = styled.h2`
     font-weight: 300;
     color: #8E9091;
     border-bottom: 1px solid #4BDB80;
+    width: 100%;
     padding-bottom: 5px;
     grid-column: 1/3;
 `
