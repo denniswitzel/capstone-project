@@ -14,6 +14,6 @@ body {
 }
 
 #root {
-    margin: 0 auto;
+    text-align: center;
 }
 `
