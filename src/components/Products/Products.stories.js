@@ -16,4 +16,3 @@ singleProduct.args = {
   title: 'amidori - veggie best burger',
   image: 'https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Amidori-Veggie-Best-Burger.png',
 }
-
