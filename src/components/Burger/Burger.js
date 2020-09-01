@@ -4,6 +4,11 @@ import Product from '../Products/Product'
 import PropTypes from 'prop-types'
 import Headline from '../Headline/Headline'
 
+Burger.propTypes = { 
+    burgers: PropTypes.arrayOf(PropTypes.object).isRequired,
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+}
 
 export default function Burger(){
     return(
@@ -16,8 +21,3 @@ export default function Burger(){
     )
 }
 
-Burger.propTypes = { 
-    burgers: PropTypes.array,
-    title: PropTypes.string,
-    image: PropTypes.string,
-}
