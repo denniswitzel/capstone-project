@@ -23,4 +23,5 @@ const HeadlineStyled = styled.h1`
     text-align: center;
     color: #4BDB80;
     font-size: 28px;
+    grid-column: 1/3;
 `

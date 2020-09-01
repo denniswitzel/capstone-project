@@ -18,11 +18,7 @@ const ProductWrapper = styled.div`
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     padding-top: 15px;
     display: inline-block;
-    margin: 20px 0 50px 0;
-
-    :nth-child(2n+1){
-        margin-right: 20px;
-    }
+    margin: 25px 0 50px 0;
 `
 
 const ProductName = styled.h3`

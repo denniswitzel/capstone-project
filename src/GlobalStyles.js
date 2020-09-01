@@ -14,6 +14,9 @@ body {
 }
 
 #root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
+    justify-items: center;
 }
 `
