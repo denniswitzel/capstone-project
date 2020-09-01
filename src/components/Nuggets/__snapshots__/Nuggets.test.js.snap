@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nuggets renders correctly 1`] = `
+Array [
+  <h2
+    className="sc-AxjAm lbYQRu"
+  >
+    Nuggets
+  </h2>,
+  <div
+    className="sc-AxirZ cKjrym"
+  >
+    <h3
+      className="sc-AxiKw joCwsm"
+    >
+      Like meat - Like Nuggets
+    </h3>
+    <img
+      alt="Like meat - Like Nuggets"
+      className="sc-AxhCb hSNggt"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/nuggets/Like-meat-Nuggets.png"
+    />
+  </div>,
+  <div
+    className="sc-AxirZ cKjrym"
+  >
+    <h3
+      className="sc-AxiKw joCwsm"
+    >
+      Rügenwalder - Mühlen Nuggets
+    </h3>
+    <img
+      alt="Rügenwalder - Mühlen Nuggets"
+      className="sc-AxhCb hSNggt"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/nuggets/Ruegenwalder-Muehlen-Nuggets.png"
+    />
+  </div>,
+  <div
+    className="sc-AxirZ cKjrym"
+  >
+    <h3
+      className="sc-AxiKw joCwsm"
+    >
+      Vegetarian Butcher - Beflügel Nuggets
+    </h3>
+    <img
+      alt="Vegetarian Butcher - Beflügel Nuggets"
+      className="sc-AxhCb hSNggt"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/nuggets/The-Vegetarian-Butcher-Vegane-Befl%C3%BCggel-Nuggets.png"
+    />
+  </div>,
+  <div
+    className="sc-AxirZ cKjrym"
+  >
+    <h3
+      className="sc-AxiKw joCwsm"
+    >
+      Vivera - Vegane Nuggets
+    </h3>
+    <img
+      alt="Vivera - Vegane Nuggets"
+      className="sc-AxhCb hSNggt"
+      src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/nuggets/Vivera-Vegane-Nuggets.png"
+    />
+  </div>,
+]
+`;

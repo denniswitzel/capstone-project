@@ -7,7 +7,16 @@ export default createGlobalStyle`
 }
 
 body {
-    margin: 0;
     font-size: 112.5%;
+    background: #F4F4F4;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    justify-items: center;
 }
 `
