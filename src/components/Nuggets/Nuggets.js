@@ -5,9 +5,9 @@ import Product from '../Products/Product'
 import PropTypes from 'prop-types'
 
 Nuggets.propTypes = { 
-    nuggets: PropTypes.arrayOf(PropTypes.object).isRequired,
-    title: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    nuggets: PropTypes.arrayOf(PropTypes.object),
+    title: PropTypes.string,
+    image: PropTypes.string,
 }
 
 export default function Nuggets(){

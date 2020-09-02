@@ -1,17 +1,18 @@
 import React from 'react';
-import Kebab from './Kebab';
+import Burger from './Burger'
 import { MemoryRouter } from 'react-router-dom';
 
 
 export default {
-  title: 'Product List - Kebab',
-  component: Kebab,
+  title: 'Product Lists/Multiple Products',
+  component: Burger,
   argTypes: {
   backgroundColor: { control: 'color' },
   },
 };
-const Template = (args) => <Kebab {...args} />;
 
-export const completeList = () => (
+const Template = (args) => <Burger {...args} />;
+
+export const multipleProducts = () => (
     <MemoryRouter>{Template({})}</MemoryRouter>
   );

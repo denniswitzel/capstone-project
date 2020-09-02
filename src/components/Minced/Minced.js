@@ -6,9 +6,9 @@ import PropTypes from 'prop-types'
 
 
 Minced.propTypes = { 
-    minced: PropTypes.arrayOf(PropTypes.object).isRequired,
-    title: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    minced: PropTypes.arrayOf(PropTypes.object),
+    title: PropTypes.string,
+    image: PropTypes.string,
 }
 
 export default function Minced(){

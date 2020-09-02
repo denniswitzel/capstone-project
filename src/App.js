@@ -8,9 +8,9 @@ import Nuggets from './components/Nuggets/Nuggets'
 import Sausages from './components/Sausages/Sausages'
 import { ReactComponent as Logo } from './images/icons/logo.svg'
 import styled from 'styled-components'
+import Headline from './components/Headline/Headline'
 
 export default function App() {
-
     const productCategories = [{
         name: "BURGER",
         icon: "https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/burger.svg"
@@ -38,7 +38,6 @@ export default function App() {
 ]
 
     return(
-        <>
          <Router>
             <Switch>
                 <Route exact path="/"> 
@@ -53,7 +52,6 @@ export default function App() {
                 <Route path="/sausages" component={Sausages}/>
             </Switch>
         </Router>
-        </>
     )
 }
 

@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Headline renders correctly 1`] = `
-<h2
-  className="sc-AxjAm lbYQRu"
-/>
+<section
+  className="sc-AxjAm kQvphW"
+>
+  <svg
+    className="sc-AxiKw jybRSk"
+    onClick={[Function]}
+  >
+    back-arrow.svg
+  </svg>
+  <h2
+    className="sc-AxirZ gMnSyX"
+  >
+    Category name
+  </h2>
+</section>
 `;

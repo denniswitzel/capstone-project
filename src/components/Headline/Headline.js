@@ -1,15 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
-import { NavLink } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
+Headline.propTypes = { 
+    headline: PropTypes.string,
+}
 
+Headline.defaultProps = {
+    headline: 'Category name'
+}
 
 export default function Headline({headline}){
+    let history = useHistory();
+
+    function handleClick() {
+    history.push("/");
+    }
+
     return(
     <Header>
-    <NavLink to="/"><ArrowStyled /></NavLink>
-    <HeadlineStyled>{headline}</HeadlineStyled>
+        <ArrowStyled onClick={handleClick}/>
+        <HeadlineStyled>{headline}</HeadlineStyled>
     </Header>
     )
 }
@@ -29,9 +42,11 @@ const HeadlineStyled = styled.h2`
     border-bottom: 1px solid #4BDB80;
     padding-bottom: 5px;
     margin: 0;
+    max-width: 300px;
 `
 const ArrowStyled = styled(Arrow)`
     position: absolute;
     left: 30px;
     margin-top: 10px;
+    cursor: pointer;
 `

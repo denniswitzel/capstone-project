@@ -2,78 +2,88 @@
 
 exports[`Minced renders correctly 1`] = `
 Array [
-  <h2
-    className="sc-AxjAm lbYQRu"
+  <section
+    className="sc-AxjAm kQvphW"
   >
-    Minced
-  </h2>,
+    <svg
+      className="sc-AxiKw jybRSk"
+      onClick={[Function]}
+    >
+      back-arrow.svg
+    </svg>
+    <h2
+      className="sc-AxirZ gMnSyX"
+    >
+      Minced
+    </h2>
+  </section>,
   <div
-    className="sc-AxirZ cKjrym"
+    className="sc-AxhCb RLztF"
   >
     <h3
-      className="sc-AxiKw joCwsm"
+      className="sc-AxhUy iFxeWf"
     >
       amidori - veggie minced
     </h3>
     <img
       alt="amidori - veggie minced"
-      className="sc-AxhCb hSNggt"
+      className="sc-AxgMl lgKYTG"
       src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Amidori-Veggie-Minced.png"
     />
   </div>,
   <div
-    className="sc-AxirZ cKjrym"
+    className="sc-AxhCb RLztF"
   >
     <h3
-      className="sc-AxiKw joCwsm"
+      className="sc-AxhUy iFxeWf"
     >
       Farm Way - Veganer Hack
     </h3>
     <img
       alt="Farm Way - Veganer Hack"
-      className="sc-AxhCb hSNggt"
+      className="sc-AxgMl lgKYTG"
       src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Farm-Way-Veganes-Hack.png"
     />
   </div>,
   <div
-    className="sc-AxirZ cKjrym"
+    className="sc-AxhCb RLztF"
   >
     <h3
-      className="sc-AxiKw joCwsm"
+      className="sc-AxhUy iFxeWf"
     >
       Garden Gourmet - Sensational Hack
     </h3>
     <img
       alt="Garden Gourmet - Sensational Hack"
-      className="sc-AxhCb hSNggt"
+      className="sc-AxgMl lgKYTG"
       src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Garden-Gourmet-Hack.png"
     />
   </div>,
   <div
-    className="sc-AxirZ cKjrym"
+    className="sc-AxhCb RLztF"
   >
     <h3
-      className="sc-AxiKw joCwsm"
+      className="sc-AxhUy iFxeWf"
     >
       Like meat - Like Hack
     </h3>
     <img
       alt="Like meat - Like Hack"
-      className="sc-AxhCb hSNggt"
+      className="sc-AxgMl lgKYTG"
       src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Like-meat-Hack.png"
     />
   </div>,
   <div
-    className="sc-AxirZ cKjrym"
+    className="sc-AxhCb RLztF"
   >
     <h3
-      className="sc-AxiKw joCwsm"
+      className="sc-AxhUy iFxeWf"
     >
       Rügenwalder - Veganes Mühlen Hack
     </h3>
     <img
       alt="Rügenwalder - Veganes Mühlen Hack"
-      className="sc-AxhCb hSNggt"
+      className="sc-AxgMl lgKYTG"
       src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Ruegenwalder-Muehlen-Hack.png"
     />
   </div>,

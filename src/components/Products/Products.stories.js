@@ -3,7 +3,7 @@ import Product from './Product';
 
 
 export default {
-  title: 'Product Categories',
+  title: 'Product Lists/Single Product',
   component: Product,
   argTypes: {
   backgroundColor: { control: 'color' },
