@@ -1,7 +1,5 @@
 import React from 'react';
 import Headline from './Headline'
-import { MemoryRouter } from 'react-router-dom';
-
 
 export default {
   title: 'Product Lists/Headline',

@@ -5,13 +5,13 @@ exports[`Headline renders correctly 1`] = `
   className="sc-AxjAm kQvphW"
 >
   <svg
-    className="sc-AxiKw jybRSk"
+    className="sc-AxiKw kteWBu"
     onClick={[Function]}
   >
     back-arrow.svg
   </svg>
   <h2
-    className="sc-AxirZ gMnSyX"
+    className="sc-AxirZ DxuTA"
   >
     Category name
   </h2>

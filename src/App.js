@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductOverview from './components/ProductOverview/ProductOverview'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import Burger from './components/Burger/Burger'
 import Kebab from './components/Kebab/Kebab'
 import Minced from './components/Minced/Minced'
@@ -8,7 +8,6 @@ import Nuggets from './components/Nuggets/Nuggets'
 import Sausages from './components/Sausages/Sausages'
 import { ReactComponent as Logo } from './images/icons/logo.svg'
 import styled from 'styled-components'
-import Headline from './components/Headline/Headline'
 
 export default function App() {
     const productCategories = [{
@@ -38,7 +37,6 @@ export default function App() {
 ]
 
     return(
-         <Router>
             <Switch>
                 <Route exact path="/"> 
                 <LogoStyled />
@@ -51,7 +49,6 @@ export default function App() {
                 <Route path="/nuggets" component={Nuggets}/>
                 <Route path="/sausages" component={Sausages}/>
             </Switch>
-        </Router>
     )
 }
 

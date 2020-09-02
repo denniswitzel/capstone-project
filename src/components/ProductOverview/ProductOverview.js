@@ -1,7 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types'
 
+ProductOverview.propTypes = { 
+    productIcon: PropTypes.node,
+    productName: PropTypes.string,
+}
+
+ProductOverview.defaultProps = {
+    productIcon: 'https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/burger.svg',
+    productName: 'BURGER',
+}
 
 export default function ProductOverview({productIcon, productName}) {
     return (    
