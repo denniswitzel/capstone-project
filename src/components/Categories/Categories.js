@@ -15,7 +15,7 @@ ProductOverview.defaultProps = {
 
 export default function ProductOverview({productIcon, productName}) {
     return (    
-        <NavLinkStyled to={`/${productName.toLowerCase()}`}>
+        <NavLinkStyled to={productName.toLowerCase()}>
         <ProductCategory>
             <ProductIcon src={productIcon} alt={productName}/>
             <ProductName>{productName}</ProductName>

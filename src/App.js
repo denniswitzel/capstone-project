@@ -1,33 +1,103 @@
 import React from 'react'
-import ProductOverview from './components/ProductOverview/ProductOverview'
+import ProductOverview from './components/Categories/Categories'
 import { Switch, Route } from 'react-router-dom'
-import Burger from './pages/Burger/Burger'
-import Kebab from './pages/Kebab/Kebab'
-import Minced from './pages/Minced/Minced'
-import Nuggets from './pages/Nuggets/Nuggets'
-import Sausages from './pages/Sausages/Sausages'
+import ProductList from './components/ProductList/ProductList'
+import burgers from './mocks/burger.json'
+import kebabs from './mocks/kebab.json'
+import minced from './mocks/minced.json'
+import nuggets from './mocks/nuggets.json'
+import sausages from './mocks/sausages.json'
+import productCategories from './mocks/category.json'
 import { ReactComponent as Logo } from './images/icons/logo.svg'
 import styled from 'styled-components'
-import productCategories from '../src/mocks/category.json'
+import Headline from './components/Headline/Headline'
 
-export default function App(){
-    return(
-            <Switch>
-                <Route exact path="/"> 
-                <LogoStyled />
-                {productCategories.map((category, index) => 
-                <ProductOverview key={index} productIcon={category.icon} productName={category.name}/>)}
-                </Route>
-                <Route path="/burger" component={Burger}/>
-                <Route path="/kebab" component={Kebab}/>
-                <Route path="/minced" component={Minced}/>
-                <Route path="/nuggets" component={Nuggets}/>
-                <Route path="/sausages" component={Sausages}/>
-            </Switch>
-    )
+export default function App() {
+  return (
+    <Switch>
+      <Route exact path="/">
+        <LogoStyled />
+        {productCategories.map((category, index) => (
+          <ProductOverview
+            key={index}
+            productIcon={category.icon}
+            productName={category.name}
+          />
+        ))}
+      </Route>
+      <Route path="/burger">
+        <>
+          <Headline headline="Burgers" />
+          {burgers.map((burger, index) => (
+            <ProductList
+              title={burger.title}
+              image={burger.image}
+              key={index}
+            />
+          ))}
+        </>
+      </Route>
+      <Route path="/cold-cuts">
+        <>
+          <Headline headline="Cold-Cuts" />
+          {minced.map((minced, index) => (
+            <ProductList
+              title={minced.title}
+              image={minced.image}
+              key={index}
+            />
+          ))}
+        </>
+      </Route>
+      <Route path="/kebab">
+        <>
+          <Headline headline="Kebab" />
+          {kebabs.map((kebab, index) => (
+            <ProductList title={kebab.title} image={kebab.image} key={index} />
+          ))}
+        </>
+      </Route>
+      <Route path="/minced">
+        <>
+          <Headline headline="Minced" />
+          {minced.map((minced, index) => (
+            <ProductList
+              title={minced.title}
+              image={minced.image}
+              key={index}
+            />
+          ))}
+        </>
+      </Route>
+      <Route path="/nuggets">
+        <>
+          <Headline headline="Nuggets" />
+          {nuggets.map((nugget, index) => (
+            <ProductList
+              title={nugget.title}
+              image={nugget.image}
+              key={index}
+            />
+          ))}
+        </>
+      </Route>
+      <Route path="/sausages">
+        <>
+          <Headline headline="Sausages" />
+          {sausages.map((sausage, index) => (
+            <ProductList
+              title={sausage.title}
+              image={sausage.image}
+              key={index}
+            />
+          ))}
+        </>
+      </Route>
+    </Switch>
+  )
 }
 
 const LogoStyled = styled(Logo)`
-    grid-column: 1/3;
-    margin: 40px 0;
+  grid-column: 1/3;
+  margin: 40px 0;
 `
