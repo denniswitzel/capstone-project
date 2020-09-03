@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { render } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
@@ -7,7 +7,7 @@ import App from './App'
 
 describe('Categories', () => {
 it('has links to all pages', () => {
-    const urls = ['/', '/burger', '/kebab', '/sausages', '/nuggets', '/minced']
+  const urls = ['/', '/burger', '/kebab', '/cold-cuts', '/sausages', '/nuggets', '/minced']
   const { getAllByRole } = render(
     <Router>
       <App />

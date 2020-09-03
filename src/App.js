@@ -1,11 +1,11 @@
 import React from 'react'
 import ProductOverview from './components/ProductOverview/ProductOverview'
 import { Switch, Route } from 'react-router-dom'
-import Burger from './components/Burger/Burger'
-import Kebab from './components/Kebab/Kebab'
-import Minced from './components/Minced/Minced'
-import Nuggets from './components/Nuggets/Nuggets'
-import Sausages from './components/Sausages/Sausages'
+import Burger from './pages/Burger/Burger'
+import Kebab from './pages/Kebab/Kebab'
+import Minced from './pages/Minced/Minced'
+import Nuggets from './pages/Nuggets/Nuggets'
+import Sausages from './pages/Sausages/Sausages'
 import { ReactComponent as Logo } from './images/icons/logo.svg'
 import styled from 'styled-components'
 
@@ -15,7 +15,7 @@ export default function App() {
         icon: "https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/burger.svg"
     },
     {
-        name: "COLD CUTS",
+        name: "COLD-CUTS",
         icon: "https://raw.githubusercontent.com/denniswitzel/capstone-project/717acadfd943ecc6bfc7f09650784cf00ff22b44/src/images/icons/coldcuts.svg"
     },
     {
@@ -40,8 +40,8 @@ export default function App() {
             <Switch>
                 <Route exact path="/"> 
                 <LogoStyled />
-                {productCategories.map((category) => 
-                <ProductOverview productIcon={category.icon} productName={category.name}/>)}
+                {productCategories.map((category, index) => 
+                <ProductOverview key={category.index} productIcon={category.icon} productName={category.name}/>)}
                 </Route>
                 <Route path="/burger" component={Burger}/>
                 <Route path="/kebab" component={Kebab}/>

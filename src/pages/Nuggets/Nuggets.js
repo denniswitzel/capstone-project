@@ -1,7 +1,7 @@
 import React from 'react'
 import nuggets from '../../mocks/nuggets.json'
-import Headline from '../Headline/Headline'
-import Product from '../Products/Product'
+import Product from '../../components/Products/Product'
+import Headline from '../../components/Headline/Headline'
 import PropTypes from 'prop-types'
 
 Nuggets.propTypes = { 

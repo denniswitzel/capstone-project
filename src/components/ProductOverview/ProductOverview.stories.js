@@ -13,7 +13,7 @@ const categories = [{
   icon: "https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/burger.svg"
 },
 {
-  name: "COLD CUTS",
+  name: "COLD-CUTS",
   icon: "https://raw.githubusercontent.com/denniswitzel/capstone-project/717acadfd943ecc6bfc7f09650784cf00ff22b44/src/images/icons/coldcuts.svg"
 },
 {

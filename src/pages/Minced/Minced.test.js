@@ -2,6 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import Minced from './Minced'
 import { render } from '@testing-library/react'
+import '@testing-library/jest-dom/extend-expect'
 
 describe('Minced', () => {
     const title = 'amidori - veggie minced'

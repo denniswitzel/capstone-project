@@ -1,8 +1,8 @@
 import React from 'react'
 import burgers from '../../mocks/burger.json'
-import Product from '../Products/Product'
+import Product from '../../components/Products/Product'
+import Headline from '../../components/Headline/Headline'
 import PropTypes from 'prop-types'
-import Headline from '../Headline/Headline'
 
 Burger.propTypes = { 
     burgers: PropTypes.arrayOf(PropTypes.object),

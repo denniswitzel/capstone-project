@@ -2,6 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import Burger from './Burger'
 import { render } from '@testing-library/react'
+import '@testing-library/jest-dom/extend-expect'
 
 describe('Burger', () => {
     const title = 'amidori - veggie best burger'
