@@ -27,7 +27,7 @@ export default function App() {
       </Route>
       <Route path="/burger">
         <>
-          <Headline headline="Burgers" />
+          <Headline headline="Burger" />
           {burgers.map((burger, index) => (
             <ProductList
               title={burger.title}
