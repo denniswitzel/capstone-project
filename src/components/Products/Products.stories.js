@@ -3,7 +3,7 @@ import Product from './Product';
 
 
 export default {
-  title: 'Product Categories',
+  title: 'Product Lists/Single Product',
   component: Product,
   argTypes: {
   backgroundColor: { control: 'color' },
@@ -16,4 +16,3 @@ singleProduct.args = {
   title: 'amidori - veggie best burger',
   image: 'https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Amidori-Veggie-Best-Burger.png',
 }
-

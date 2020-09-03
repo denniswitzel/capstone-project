@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product renders correctly 1`] = `
+exports[`ProductList renders correctly 1`] = `
 <div
   className="sc-AxjAm jTSiGe"
 >
