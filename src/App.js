@@ -40,13 +40,7 @@ export default function App() {
       <Route path="/cold-cuts">
         <>
           <Headline headline="Cold-Cuts" />
-          {minced.map((minced, index) => (
-            <ProductList
-              title={minced.title}
-              image={minced.image}
-              key={index}
-            />
-          ))}
+          <SubheadlineStyled>Coming soon</SubheadlineStyled>
         </>
       </Route>
       <Route path="/kebab">
@@ -100,4 +94,10 @@ export default function App() {
 const LogoStyled = styled(Logo)`
   grid-column: 1/3;
   margin: 40px 0;
+`
+const SubheadlineStyled = styled.h3`
+  color: #4bdb80;
+  margin: 100px 0 0 0px;
+  text-align: center;
+  grid-column: 1/3;
 `
