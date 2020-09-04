@@ -1,25 +1,25 @@
 import React from 'react'
-import ProductOverview from './components/Categories/Categories'
-import { Switch, Route } from 'react-router-dom'
-import ProductList from './components/ProductList/ProductList'
-import {
-  burgerList,
-  kebabList,
-  mincedList,
-  nuggetsList,
-  sausagesList,
-} from './utils/sortArrays'
-import productCategories from './mocks/category.json'
 import { ReactComponent as Logo } from './images/icons/logo.svg'
+import useFetch from './components/hooks/useFetch'
+import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
+import ProductList from './components/ProductList/ProductList'
+import ProductOverview from './components/Categories/Categories'
 import Headline from './components/Headline/Headline'
 
 export default function App() {
+  const burgers = useFetch('burger')
+  const kebabs = useFetch('kebab')
+  const minced = useFetch('minced')
+  const nuggets = useFetch('nuggets')
+  const sausages = useFetch('sausages')
+  const categories = useFetch('categories')
+
   return (
     <Switch>
       <Route exact path="/">
         <LogoStyled />
-        {productCategories.map((category, index) => (
+        {categories.map((category, index) => (
           <ProductOverview
             key={index}
             productIcon={category.icon}
@@ -29,8 +29,8 @@ export default function App() {
       </Route>
       <Route path="/burger">
         <>
-          <Headline headline="Burgers" />
-          {burgerList.map((burger, index) => (
+          <Headline headline="Burger" />
+          {burgers.map((burger, index) => (
             <ProductList
               title={burger.title}
               image={burger.image}
@@ -48,7 +48,7 @@ export default function App() {
       <Route path="/kebab">
         <>
           <Headline headline="Kebab" />
-          {kebabList.map((kebab, index) => (
+          {kebabs.map((kebab, index) => (
             <ProductList title={kebab.title} image={kebab.image} key={index} />
           ))}
         </>
@@ -56,7 +56,7 @@ export default function App() {
       <Route path="/minced">
         <>
           <Headline headline="Minced" />
-          {mincedList.map((minced, index) => (
+          {minced.map((minced, index) => (
             <ProductList
               title={minced.title}
               image={minced.image}
@@ -68,7 +68,7 @@ export default function App() {
       <Route path="/nuggets">
         <>
           <Headline headline="Nuggets" />
-          {nuggetsList.map((nugget, index) => (
+          {nuggets.map((nugget, index) => (
             <ProductList
               title={nugget.title}
               image={nugget.image}
@@ -80,7 +80,7 @@ export default function App() {
       <Route path="/sausages">
         <>
           <Headline headline="Sausages" />
-          {sausagesList.map((sausage, index) => (
+          {sausages.map((sausage, index) => (
             <ProductList
               title={sausage.title}
               image={sausage.image}

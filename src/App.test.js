@@ -5,26 +5,34 @@ import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
 import App from './App'
 
-describe('Categories', () => {
-it('has links to all pages', () => {
-  const urls = ['/', '/burger', '/kebab', '/cold-cuts', '/sausages', '/nuggets', '/minced']
-  const { getAllByRole } = render(
-    <Router>
-      <App />
-    </Router>
-  )
-  
+describe('App', () => {
+  it('has links to all pages', () => {
+    const urls = [
+      '/',
+      '/burger',
+      '/kebab',
+      '/cold-cuts',
+      '/sausages',
+      '/nuggets',
+      '/minced',
+    ]
+    const { getAllByRole } = render(
+      <Router>
+        <App />
+      </Router>
+    )
+
     getAllByRole('link').forEach((link) => {
-        expect(urls).toContain(link.getAttribute('href'))
-      })
-    })
-  
-it('renders correctly', () => {
-    const tree = renderer.create(
-        <Router>
-          <App />
-        </Router>
-      )
-      expect(tree).toMatchSnapshot()
+      expect(urls).toContain(link.getAttribute('href'))
     })
   })
+
+  it('renders correctly', () => {
+    const tree = renderer.create(
+      <Router>
+        <App />
+      </Router>
+    )
+    expect(tree).toMatchSnapshot()
+  })
+})

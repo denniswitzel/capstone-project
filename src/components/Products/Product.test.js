@@ -9,7 +9,7 @@ describe('Product', () => {
   const image =
     'https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/nuggets/Like-meat-Nuggets.png'
 
-  it('display title and image', () => {
+  it('displays title and image', () => {
     const { getByText } = render(<Product title={title} image={image} />)
     expect(getByText(title)).toBeInTheDocument()
     expect(document.querySelector('img').getAttribute('src')).toBe(image)
