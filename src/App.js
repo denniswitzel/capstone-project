@@ -2,22 +2,24 @@ import React from 'react'
 import ProductOverview from './components/Categories/Categories'
 import { Switch, Route } from 'react-router-dom'
 import ProductList from './components/ProductList/ProductList'
-import burgers from './mocks/burger.json'
-import kebabs from './mocks/kebab.json'
-import minced from './mocks/minced.json'
-import nuggets from './mocks/nuggets.json'
-import sausages from './mocks/sausages.json'
-import productCategories from './mocks/category.json'
+import useFetch from '../src/hooks/useFetch'
 import { ReactComponent as Logo } from './images/icons/logo.svg'
 import styled from 'styled-components'
 import Headline from './components/Headline/Headline'
 
 export default function App() {
+  const burgers = useFetch('burger')
+  const kebabs = useFetch('kebab')
+  const minced = useFetch('minced')
+  const nuggets = useFetch('nuggets')
+  const sausages = useFetch('sausages')
+  const categories = useFetch('categories')
+
   return (
     <Switch>
       <Route exact path="/">
         <LogoStyled />
-        {productCategories.map((category, index) => (
+        {categories.map((category, index) => (
           <ProductOverview
             key={index}
             productIcon={category.icon}
@@ -30,6 +32,7 @@ export default function App() {
           <Headline headline="Burger" />
           {burgers.map((burger, index) => (
             <ProductList
+              link={`/burger/${burger.id}`}
               title={burger.title}
               image={burger.image}
               key={index}

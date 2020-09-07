@@ -1,9 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 
-export default function Product({ title, image }) {
+export default function Product({ title, image, link }) {
+  let history = useHistory()
+
+  function handleClick() {
+    history.push(link)
+  }
   return (
-    <ProductWrapper>
+    <ProductWrapper onClick={handleClick}>
       <ProductName>{title}</ProductName>
       <ProductImage src={image} alt={title} />
     </ProductWrapper>
