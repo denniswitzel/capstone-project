@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Gluten } from '../../images/icons/gluten.svg'
 import { ReactComponent as Soy } from '../../images/icons/soy.svg'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 
-export default function Detailpage({ image, title, ingredients, allergies }) {
+export default function Detailpage({ category }) {
+  let { id } = useParams()
+  useEffect(() => {
+    fetchDetail()
+  }, [])
+
+  const [detail, setDetail] = useState({
+    allergies: [],
+  })
+
+  const fetchDetail = async () => {
+    const fetchDetail = await fetch(`http://localhost:4000/${category}/${id}`)
+    const detail = await fetchDetail.json()
+    setDetail(detail)
+  }
+
   let history = useHistory()
 
   function handleClick() {
@@ -16,15 +31,19 @@ export default function Detailpage({ image, title, ingredients, allergies }) {
     <>
       <ImageSection>
         <ArrowStyled onClick={handleClick} />
-        <ProductName>{title}</ProductName>
-        <ProductImage src={image} />
+        <ProductName>{detail.title}</ProductName>
+        <ProductImage src={detail.image} />
       </ImageSection>
       <ProductInformation>
         <Headline>Ingredients</Headline>
-        <IngredientsList>{ingredients}</IngredientsList>
-        <Headline>Allergies</Headline>
-        {allergies.map((allergy) => (
-          <AllergyContainer>
+        <IngredientsList>{detail.ingredients}</IngredientsList>
+        {detail.allergies.length ? (
+          <Headline>Allergies</Headline>
+        ) : (
+          <Headline></Headline>
+        )}
+        {detail.allergies.map((allergy, index) => (
+          <AllergyContainer key={index}>
             {allergy === 'Gluten' ? <Gluten /> : <Soy />}
             <Allergies>{allergy}</Allergies>
           </AllergyContainer>
