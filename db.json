@@ -78,16 +78,6 @@
                 "Soy"
             ],
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Wheat-Vegan-Superhero-Burger.png"
-        },
-        {
-            "id": 9,
-            "title": "Wheaty - Veganer Tex-Mex Burger",
-            "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) (42%), WEIZENeiweißtexturat* (WEIZENeiweiß*, WEIZENmehl*) (13%), Paprika rot*, ölsäurereiches (High-Oleic) Sonnenblumenöl*, SOJAsauce* (Wasser, SOJAbohnen*, Meersalz), Zwiebeln*, Knoblauch*, Gewürze*, Steinsalz, Reismehl*, Verdickungsmittel: Johannisbrotkernmehl",
-            "allergies": [
-                "Gluten",
-                "Soy"
-            ],
-            "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/burger/Wheat-Vegan-Tex-Mex-Burger.png"
         }
     ],
     "kebab": [
@@ -156,70 +146,8 @@
                 "Soy"
             ],
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Like-meat-Grilled-Chicken.png"
-        },
-        {
-            "id": 9,
-            "title": "Like meat - Like Gyros",
-            "ingredients": "Wasser, SOJAPROTEINKONZENTRAT* 27%, Sonnenblumenöl*, natürliches Aroma, Salz, Maltodextrin*, Gewürze (Paprika*, Pfeffer*, Ingwer*, Zwiebel*, Muskatnuss*, Muskatblüte*, Kardamom*, Knoblauch*)",
-            "allergies": [
-                "Soy"
-            ],
-            "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Like-meat-Gyros.png"
-        },
-        {
-            "id": 10,
-            "title": "Rügenwalder - Geschnetzeltes",
-            "ingredients": "Trinkwasser, 27% Sojaproteinkonzentrat, Rapsöl, Aroma, Kochsalz, Branntweinessig, Gewürze, Traubenzucker, Schutzkulturen",
-            "allergies": [
-                "Soy"
-            ],
-            "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Ruegenwalder-Muehlen-Geschnetzeltes.png"
-        },
-        {
-            "id": 11,
-            "title": "Vegetarian Butcher - Geschnetzeltes",
-            "ingredients": "Trinkwasser, 27% Sojaproteinkonzentrat, Rapsöl, Aroma, Kochsalz, Branntweinessig, Gewürze, Traubenzucker, Schutzkulturen",
-            "allergies": [
-                "Soy"
-            ],
-            "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/The-Vegetarian-Butcher-Veganes-1001-Geschnetzeltes.png"
-        },
-        {
-            "id": 12,
-            "title": "Vivera - Veganer Döner Kebab",
-            "ingredients": "88% rehydriertes SOJA-EIWEIß*, Rapsöl, Sonnenblumenöl, Essig, Kräutern und Gewürze, Salz, natürliche Aromen, Gemüse (Paprika, Zwiebel), Wasser, Knoblauch, Maltodextrin, Paprikakonzentrat, Eisen(II) Gluconat, Vitamin B12",
-            "allergies": [
-                "Soy"
-            ],
-            "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Vivera-Veganer-Doener-Kebab.png"
-        },
-        {
-            "id": 13,
-            "title": "Wheaty - Veganer Döner",
-            "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 84%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Hefeextrakt*, Gewürze* (enthält SELLERIE* und SENF*), Zwiebeln*, Steinsalz, Verdickungsmittel: Johannisbrotkernmehl*",
-            "allergies": [
-                "Gluten"
-            ],
-            "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Wheaty-Veganer-Doener.png"
-        },
-        {
-            "id": 14,
-            "title": "Wheaty - Veganer Curry",
-            "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 76,8%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Gewürze*, Hefeextrakt*, Steinsalz, Zwiebeln*, Verdickungsmittel: Johannisbrotkernmehl* und Guarkernmehl*.",
-            "allergies": [
-                "Gluten"
-            ],
-            "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Wheaty-Veganes-Curry.png"
-        },
-        {
-            "id": 15,
-            "title": "Wheaty - Veganes Gyros",
-            "ingredients": "(Wasser, WEIZENeiweiß*) 78%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Zwiebeln*, Gewürze* (enthält SELLERIE* und SENF*), Steinsalz, Hefeextrakt*, Verdickungsmittel: Johannisbrotkernmehl*",
-            "allergies": [
-                "Gluten"
-            ],
-            "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Wheaty-Veganes-Gyros.png"
         }
+ 
     ],
     "minced": [
         {
@@ -378,32 +306,6 @@
                 "Gluten"
             ],
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/sausages/Wheaty-Vegane-Weiße.png"
-        }
-    ],
-    "categories": [
-        {
-            "name": "BURGER",
-            "icon": "https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/burger.svg"
-        },
-        {
-            "name": "COLD-CUTS",
-            "icon": "https://raw.githubusercontent.com/denniswitzel/capstone-project/717acadfd943ecc6bfc7f09650784cf00ff22b44/src/images/icons/coldcuts.svg"
-        },
-        {
-            "name": "KEBAB",
-            "icon": "https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/kebab.svg"
-        },
-        {
-            "name": "MINCED",
-            "icon": "https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/minced.svg"
-        },
-        {
-            "name": "NUGGETS",
-            "icon": "https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/nuggets.svg"
-        },
-        {
-            "name": "SAUSAGES",
-            "icon": "https://raw.githubusercontent.com/denniswitzel/capstone-project/67e1d46d4c80dc548f311f8b10cb5d5c61960c60/src/images/icons/sausage.svg"
         }
     ]
 }
