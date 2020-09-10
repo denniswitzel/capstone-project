@@ -1,55 +1,50 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
+import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
 import { ReactComponent as Gluten } from '../../images/icons/gluten.svg'
 import { ReactComponent as Soy } from '../../images/icons/soy.svg'
-import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
-import { useHistory, useParams } from 'react-router-dom'
+import GetDetails from '../../services/GetDetails'
+import PropTypes from 'prop-types'
 
-export default function Detailpage({ category }) {
-  let { id } = useParams()
-  useEffect(() => {
-    fetchDetail()
-  }, [])
 
-  const [detail, setDetail] = useState({
-    allergies: [],
-  })
+Detailpage.propTypes = {
+  category: PropTypes.string,
+  id: PropTypes.number,
+}
 
-  const fetchDetail = async () => {
-    const fetchDetail = await fetch(`http://localhost:4000/${category}/${id}`)
-    const detail = await fetchDetail.json()
-    setDetail(detail)
-  }
+export default function Detailpage({ category, id }) {
+  const { title, image, ingredients, allergies } = GetDetails(category, id)
 
-  let history = useHistory()
+  const history = useHistory()
 
   function handleClick() {
     history.goBack()
   }
 
   return (
-    <>
+    <section>
       <ImageSection>
         <ArrowStyled onClick={handleClick} />
-        <ProductName>{detail.title}</ProductName>
-        <ProductImage src={detail.image} />
+        <ProductName>{title}</ProductName>
+        <ProductImage src={image} alt={title}/>
       </ImageSection>
       <ProductInformation>
         <Headline>Ingredients</Headline>
-        <IngredientsList>{detail.ingredients}</IngredientsList>
-        {detail.allergies.length ? (
+        <IngredientsList>{ingredients}</IngredientsList>
+        {allergies?.length ? (
           <Headline>Allergies</Headline>
         ) : (
           <Headline></Headline>
         )}
-        {detail.allergies.map((allergy, index) => (
+        {allergies?.map((allergy, index) => (
           <AllergyContainer key={index}>
             {allergy === 'Gluten' ? <Gluten /> : <Soy />}
             <Allergies>{allergy}</Allergies>
           </AllergyContainer>
         ))}
       </ProductInformation>
-    </>
+    </section>
   )
 }
 
@@ -77,7 +72,6 @@ const ProductName = styled.h2`
 const ProductImage = styled.img`
   height: 180px;
   text-align: center;
-  -webkit-filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   position: relative;
   top: 80px;

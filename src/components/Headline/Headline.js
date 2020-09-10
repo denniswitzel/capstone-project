@@ -13,7 +13,7 @@ Headline.defaultProps = {
 }
 
 export default function Headline({ headline }) {
-  let history = useHistory()
+  const history = useHistory()
 
   function handleClick() {
     history.goBack()

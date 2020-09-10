@@ -1,19 +1,30 @@
-import React from 'react'
-import Product from '../Products/Product'
 import PropTypes from 'prop-types'
-import { Link, useHistory } from 'react-router-dom'
+import React from 'react'
+import { useHistory } from 'react-router-dom'
+import Headline from '../Headline/Headline'
+import Product from '../Products/Product'
 
 ProductList.propTypes = {
   title: PropTypes.string,
   image: PropTypes.string,
+  category: PropTypes.string,
+  id: PropTypes.number,
 }
 
-export default function ProductList({ key, title, image, id, category }) {
-  let history = useHistory()
+export default function ProductList({ product, category, headline }) {
+  const history = useHistory()
 
-  function handleClick() {
-    history.push(`/${category}/${id}`)
-  }
-
-  return <Product onClick={handleClick} key={key} title={title} image={image} />
+  return (
+    <>
+      <Headline headline={headline} />
+      {product?.map((productItem) => (
+        <Product
+          onClick={() => history.push(`/${category}/${productItem.id}`)}
+          key={productItem.id}
+          title={productItem.title}
+          image={productItem.image}
+        />
+      ))}
+    </>
+  )
 }
