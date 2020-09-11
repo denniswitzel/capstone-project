@@ -1,7 +1,8 @@
 {
     "burger": [
         {
-            "id": 1,
+            "id":1,
+            "category": "burger",
             "title": "amidori - veggie best burger",
             "ingredients": "Wasser, Erbsenproteinisolat 17 %, Zwiebelwürfel, Rapsöl, Kokosfett, Branntweinessig, Verdickungsmittel Methylcellulose, Tomatenmark, Apfelessig, Malzextrakt (Wasser, glutenfreies GERSTENRÖSTMALZ, Hopfen, Hefe), Citrusfaser, Erbsenfaser, glutenfreies HAFERVOLLKORNMEHL, Kartoffelstärke, Gewürze, Speisesalz, färbendes Frucht- und Gemüsekonzentrat (Hibiskus, Karotte, rote Bete), Hefeextrakt, natürliches Aroma, Antioxidationsmittel: Extrakt aus Rosmarin, Rauch",
             "allergies": [
@@ -11,6 +12,7 @@
         },
         {
             "id": 2,
+            "category": "burger",
             "title": "followfood - FREI!BURGER",
             "ingredients": "Seitan* 54 % (Wasser, Weizeneiweiß), Weizeneiweißtexturat 26 % (Weizeneiweiß, Weizenmehl), ölsäurereiches (High-Oleic) Sonnenblumenöl, Gewürze, Sojasauce (Wasser, Sojabohnen, Meersalz), Hefeextrakt, Zwiebeln, Reismehl, Verdickungsmittel: Johannisbrotkernmehl",
             "allergies": [
@@ -21,6 +23,7 @@
         },
         {
             "id": 3,
+            "category": "burger",
             "title": "Garden Gourmet - Sensational Burger",
             "ingredients": "Trinkwasser, 18,5 % SOJAPROTEIN, pflanzliche Öle (Raps, Kokosnuss), natürliche Aromen, 1,7% WEIZENPROTEIN, Stabilisator (Methylcellulose), Branntweinessig, Frucht- und Pflanzenkonzentrate (Rote Beete, Paprika, Karotte, schwarze Johannisbeere), Speisesalz, GERSTENMALZEXTRAKT",
             "allergies": [
@@ -31,6 +34,7 @@
         },
         {
             "id": 4,
+            "category": "burger",
             "title": "Rügenwalder - Mühlen Burger",
             "ingredients": "Trinkwasser, 16% Sojaproteinkonzentrat, Rapsöl, Zwiebeln, Weizengluten, Kochsalz, Branntweinessig, Verdickungsmittel: Methylcellulose, Aroma, Weizenstärke, färbende Lebensmittel: Konzentrat aus Rote Beete, Karotte, Rettich",
             "allergies": [
@@ -41,6 +45,7 @@
         },
         {
             "id": 5,
+            "category": "burger",
             "title": "Rügenwalder - Mühlen Crispyburger",
             "ingredients": "Trinkwasser, Weizenmehl, 11% Sojaproteinkonzentrat, Weizengluten, Rapsöl, 4% Sojaproteinisolat, Kochsalz, Verdickungsmittel: Methylcellulose, Branntweinessig, Maismehl, natürliches Aroma, Weizenstärke, Zucker, Gewürze, Traubenzucker, Hefe",
             "allergies": [
@@ -51,6 +56,7 @@
         },
         {
             "id": 6,
+            "category": "burger",
             "title": "The Vegetarian Butcher - Sieht-Chick-Aus Burger",
             "ingredients": "63% Sojabasis (Wasser, texturiertes SOJAEIWEISS, WEIZENSTÄRKE, WEIZENEIWEISS), dicke Bohnen, Sonnenblumenöl, Palmöl, Gewürzextrakte (Koriander, Nelke, Zwiebel, Oregano), Verdickungsmittel (Methylcellulose), natürliches Aroma, Bambusfaser, Stärke, Citrusfaser, Gewürze (Muskatblüte, Ingwer, Knoblauch, Pfeffer, Zwiebel), Speisesalz, karamellisierter Zucker, Stabilisator (verarbeitete Euchema-Algen), Eisendiphosphat, Vitamin B12",
             "allergies": [
@@ -61,6 +67,7 @@
         },
         {
             "id": 7,
+            "category": "burger",
             "title": "Vivera - Veganer Burger",
             "ingredients": "47% Kürbis*, 29% Süßkartoffel*, Sonnenblumenöl, SOJA-EIWEIß, Kartoffelstärke, Gewürze, Verdickungsmittel (Methylcellulose), Essig, WEIZENFASERN, Salz, rote Paprika, Wasser, Zwiebel, natürliche Aromen, Knoblauch",
             "allergies": [
@@ -71,6 +78,7 @@
         },
         {
             "id": 8,
+            "category": "burger",
             "title": "Wheaty - Vegan Superhero Burger",
             "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) (54%), WEIZENeiweißtexturat* (WEIZENeiweiß*, WEIZENmehl*) ölsäurereiches (High-Oleic) Sonnenblumenöl*, Zwiebeln*, SOJAsauce* (Wasser, SOJAbohnen*, Meersalz), Hefeextrakt*, Gewürze*, Reismehl*, Verdickungsmittel: Johannisbrotkernmehl",
             "allergies": [
@@ -81,6 +89,7 @@
         },
         {
             "id": 9,
+            "category": "burger",
             "title": "Wheaty - Veganer Tex-Mex Burger",
             "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) (42%), WEIZENeiweißtexturat* (WEIZENeiweiß*, WEIZENmehl*) (13%), Paprika rot*, ölsäurereiches (High-Oleic) Sonnenblumenöl*, SOJAsauce* (Wasser, SOJAbohnen*, Meersalz), Zwiebeln*, Knoblauch*, Gewürze*, Steinsalz, Reismehl*, Verdickungsmittel: Johannisbrotkernmehl",
             "allergies": [
@@ -92,21 +101,24 @@
     ],
     "kebab": [
         {
-            "id": 1,
+            "id": 10,
+            "category": "kebab",
             "title": "amidori - veggie kebab",
             "ingredients": "Wasser, Erbsenproteinisolat 31 %, Rapsöl, Tomatenmark, Branntweinessig, Koriander, Paprika geräuchert, Gewürze, Malzextrakt (Wasser, glutenfreies GERSTENRÖSTMALZ, Hopfen, Hefe), Erbsenfaser, glutenfreies HAFERVOLLKORNMEHL, Kartoffelstärke, Apfelessig, Speisesalz, natürliches Aroma, Antioxidationsmittel: Extrakt aus Rosmarin",
             "allergies": [],
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Amidori-Veggie-Kebab.png"
         },
         {
-            "id": 2,
+            "id": 11,
+            "category": "kebab",
             "title": "amidori - veggie pulled",
             "ingredients": "Wasser, Erbsenproteinisolat 32 %, Rapsöl, Tomatenmark, Branntweinessig, Thymian, Knoblauchgranulat, Gewürze, glutenfreies HAFERVOLLKORNMEHL, Erbsenfaser, Kartoffelstärke, Speisesalz, Apfelessig, natürliches Aroma, Antioxidationsmittel: Extrakt aus Rosmarin",
             "allergies": [],
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Amidori-Veggie-Pulled.png"
         },
         {
-            "id": 3,
+            "id": 12,
+            "category": "kebab",
             "title": "Garden Gourmet - Filet-Stückchen",
             "ingredients": "Trinkwasser, 31,7 % SOJAPROTEIN, Rapsöl, Branntweinessig, Hefeextrakt, Speisesalz, Aroma",
             "allergies": [
@@ -115,7 +127,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Garden-Gourmet-Vegane-Filet-Stueckchen.png"
         },
         {
-            "id": 4,
+            "id": 13,
+            "category": "kebab",
             "title": "Like meat - Like BBQ Chicken",
             "ingredients": "Wasser, SOJAROTEINKONZENTRAT* 24,9%, Barbecuesauce 19,5% (Zucker*, Wasser, Tomate*, Apfelmus*, konzentrierter Traubenmost*, Weinessig*, geräuchertes Salz (Salz, Rauch), Gewürze (Paprika*, Knoblauch*, Pfeffer*, Chili*)),  Sonnenblumenöl*, natürliches Aroma, Salz, Maltodextrin",
             "allergies": [
@@ -124,7 +137,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Like-meat-BBQ-Chicken.png"
         },
         {
-            "id": 5,
+            "id": 14,
+            "category": "kebab",
             "title": "Like meat - Like Chicken",
             "ingredients": "Wasser, SOJAPROTEINKONZENTRAT* 27%, Sonnenblumenöl*, natürliches Aroma, Salz, Maltodextrin*, Gewürze (Paprika*, Pfeffer*, Ingwer*, Zwiebel*, Muskatnuss*, Muskatblüte*, Kardamom*, Knoblauch*)",
             "allergies": [
@@ -133,14 +147,16 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Like-meat-Chicken.png"
         },
         {
-            "id": 6,
+            "id": 15,
+            "category": "kebab",
             "title": "Like meat - Like Curry Chicken",
             "ingredients": "Wasser, Erbsenproteinisolat 24%, Erbsenfaser, Marinade 8,4% (Sonnenblumenöl, natürliches Aroma, Gewürze (Bockshornkleesamen, Chili, Kurkuma, Fenchel, Ingwer, Kardamom, Knoblauch, Kreuzkümmel, Koriander, Muskatnuss, Zimt, Zwiebel) Rapsöl, Gewürzextrakte, Salz). Kann Spuren von SOJA enthalten",
             "allergies": [],
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Like-meat-Curry-Chicken.png"
         },
         {
-            "id": 7,
+            "id": 16,
+            "category": "kebab",
             "title": "Like meat - Like Döner",
             "ingredients": "Wasser, SOJAPROTEINKONZENTRAT* 26,4%, Marinade 6,2% (Rapsöl*, Gewürze*, Salz, Palmfett*, Dextrose*, Branntweinessig*, Rohrzucker*, Gewürzextrakte, Antioxidationsmittel: Ascorbinsäure), Salz, Maltodextrin*, natürliches Aroma",
             "allergies": [
@@ -149,7 +165,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Like-meat-Doener.png"
         },
         {
-            "id": 8,
+            "id": 17,
+            "category": "kebab",
             "title": "Like meat - Like Grilled Chicken",
             "ingredients": "Wasser, SOJAPROTEINKONZENTRAT* 29,7%, Sonnenblumenöl*, natürliches Aroma, Gewürze 2,6% (Paprika* 71%, Knoblauch*, Petersilie*, Pfeffer*, Rosmarin*, Zwiebel*), Salz, Paprikaextrakt 0,04%, Dextrose*",
             "allergies": [
@@ -158,7 +175,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Like-meat-Grilled-Chicken.png"
         },
         {
-            "id": 9,
+            "id": 18,
+            "category": "kebab",
             "title": "Like meat - Like Gyros",
             "ingredients": "Wasser, SOJAPROTEINKONZENTRAT* 27%, Sonnenblumenöl*, natürliches Aroma, Salz, Maltodextrin*, Gewürze (Paprika*, Pfeffer*, Ingwer*, Zwiebel*, Muskatnuss*, Muskatblüte*, Kardamom*, Knoblauch*)",
             "allergies": [
@@ -167,7 +185,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Like-meat-Gyros.png"
         },
         {
-            "id": 10,
+            "id": 19,
+            "category": "kebab",
             "title": "Rügenwalder - Geschnetzeltes",
             "ingredients": "Trinkwasser, 27% Sojaproteinkonzentrat, Rapsöl, Aroma, Kochsalz, Branntweinessig, Gewürze, Traubenzucker, Schutzkulturen",
             "allergies": [
@@ -176,7 +195,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Ruegenwalder-Muehlen-Geschnetzeltes.png"
         },
         {
-            "id": 11,
+            "id": 20,
+            "category": "kebab",
             "title": "Vegetarian Butcher - Geschnetzeltes",
             "ingredients": "Trinkwasser, 27% Sojaproteinkonzentrat, Rapsöl, Aroma, Kochsalz, Branntweinessig, Gewürze, Traubenzucker, Schutzkulturen",
             "allergies": [
@@ -185,7 +205,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/The-Vegetarian-Butcher-Veganes-1001-Geschnetzeltes.png"
         },
         {
-            "id": 12,
+            "id": 21,
+            "category": "kebab",
             "title": "Vivera - Veganer Döner Kebab",
             "ingredients": "88% rehydriertes SOJA-EIWEIß*, Rapsöl, Sonnenblumenöl, Essig, Kräutern und Gewürze, Salz, natürliche Aromen, Gemüse (Paprika, Zwiebel), Wasser, Knoblauch, Maltodextrin, Paprikakonzentrat, Eisen(II) Gluconat, Vitamin B12",
             "allergies": [
@@ -194,7 +215,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Vivera-Veganer-Doener-Kebab.png"
         },
         {
-            "id": 13,
+            "id": 22,
+            "category": "kebab",
             "title": "Wheaty - Veganer Döner",
             "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 84%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Hefeextrakt*, Gewürze* (enthält SELLERIE* und SENF*), Zwiebeln*, Steinsalz, Verdickungsmittel: Johannisbrotkernmehl*",
             "allergies": [
@@ -203,7 +225,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Wheaty-Veganer-Doener.png"
         },
         {
-            "id": 14,
+            "id": 23,
+            "category": "kebab",
             "title": "Wheaty - Veganer Curry",
             "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 76,8%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Gewürze*, Hefeextrakt*, Steinsalz, Zwiebeln*, Verdickungsmittel: Johannisbrotkernmehl* und Guarkernmehl*.",
             "allergies": [
@@ -212,7 +235,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/kebab/Wheaty-Veganes-Curry.png"
         },
         {
-            "id": 15,
+            "id": 24,
+            "category": "kebab",
             "title": "Wheaty - Veganes Gyros",
             "ingredients": "(Wasser, WEIZENeiweiß*) 78%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Zwiebeln*, Gewürze* (enthält SELLERIE* und SENF*), Steinsalz, Hefeextrakt*, Verdickungsmittel: Johannisbrotkernmehl*",
             "allergies": [
@@ -223,7 +247,8 @@
     ],
     "minced": [
         {
-            "id": 1,
+            "id": 25,
+            "category": "minced",
             "title": "amidori - veggie minced",
             "ingredients": "Wasser, Erbsenproteinisolat 35 %, Tomatenmark, Malzextrakt (Wasser, glutenfreies GERSTENRÖSTMALZ, Hopfen, Hefe), Gewürze, glutenfreies HAFERVOLLKORNMEHL, Erbsenfaser, Rapsöl, Kartoffelstärke, Speisesalz, Dextrose, natürliches Aroma, Säuerungsmittel Citronensäure, Antioxidationsmittel: Extrakt aus Rosmarin, Ascorbinsäure",
             "allergies": [
@@ -232,14 +257,16 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Amidori-Veggie-Minced.png"
         },
         {
-            "id": 2,
+            "id": 26,
+            "category": "minced",
             "title": "Farm Way - Veganer Hack",
             "ingredients": "Trinkwasser, Erbsenproteinisolat 23 %, Rapsöl, Kokosfett, Verdickungsmittel: Carboxymethylcellulose, Cellulose, Maltodextrin, Speisesalz, Aromen, färbendes Lebensmittel: Rote-Beete-Pulver, gemildeter Branntweinessig, Apfelextrakt",
             "allergies": [],
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Farm-Way-Veganes-Hack.png"
         },
         {
-            "id": 3,
+            "id": 27,
+            "category": "minced",
             "title": "Garden Gourmet - Sensational Hack",
             "ingredients": "Trinkwasser, 22,9 % SOJAPROTEINKONZENTRAT, pflanzliche Öle (Raps, Kokosnuss), Stabilisator (Methylcellulose), natürliche Aromen, Branntweinessig, Knoblauchpulver, Speisesalz, Pflanzen- und Fruchtkonzentrate (Rote Beete, Karotten, Paprika, schwarze Johannisbeere), Zwiebelpulver, GERSTENMALZEXTRAKT, schwarzer Pfeffer",
             "allergies": [
@@ -249,7 +276,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Garden-Gourmet-Hack.png"
         },
         {
-            "id": 4,
+            "id": 28,
+            "category": "minced",
             "title": "Like meat - Like Hack",
             "ingredients": "Wasser, texturiertes SOJAPROTEIN* 43%, Sonnenblumenöl*, natürliches Aroma, Karamellzuckersirup*, Salz, Gewürze (Knoblauch*, Muskatnuss*, Paprika*, Pfeffer*, Zwiebel*), Maltodextrin",
             "allergies": [
@@ -258,7 +286,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/minced/Like-meat-Hack.png"
         },
         {
-            "id": 5,
+            "id": 29,
+            "category": "minced",
             "title": "Rügenwalder - Veganes Mühlen Hack",
             "ingredients": "Trinkwasser, 26% Sojaproteinkonzentrat, Branntweinessig, Rapsöl, Kochsalz, natürliches Aroma, Gewürze, Karamell",
             "allergies": [
@@ -269,7 +298,8 @@
     ],
     "nuggets": [
         {
-            "id": 1,
+            "id": 30,
+            "category": "nuggets",
             "title": "Like meat - Like Nuggets",
             "ingredients": "Wasser, Panade 23% (Cornflakes (Mais, Salz, Zucker), Maismehl, Maisstärke, Kartoffelstärke, Verdickungsmittel: Xanthan), SOJAPROTEINKONZENTRAT 13%, Sonnenblumenöl, HAFERSPELZFASER (glutenfrei), Salz, Verdickungsmittel: Methylcellulose, natürliches Aroma, Dextrose",
             "allergies": [
@@ -278,7 +308,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/nuggets/Like-meat-Nuggets.png"
         },
         {
-            "id": 2,
+            "id": 31,
+            "category": "nuggets",
             "title": "Rügenwalder - Mühlen Nuggets",
             "ingredients": "Trinkwasser, Weizenmehl, 11% Sojaproteinkonzentrat, Weizengluten, Rapsöl, 4% Sojaproteinisolat, Kochsalz, Verdickungsmittel: Methylcellulose, Branntweinessig, Maismehl, natürliches Aroma, Weizenstärke, Zucker, Gewürze, Traubenzucker, Hefe",
             "allergies": [
@@ -288,7 +319,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/nuggets/Ruegenwalder-Muehlen-Nuggets.png"
         },
         {
-            "id": 3,
+            "id": 32,
+            "category": "nuggets",
             "title": "Vegetarian Butcher - Beflügel Nuggets",
             "ingredients": "69% Sojabasis (Trinkwasser, texturiertes SOJAEIWEISS), Cornflakes (Mais, Zucker), Sonnenblumenöl, Mehl (Mais, Reis), HAFERFASER, Rapsöl, natürliche Aromen, Verdickungsmittel (Methylcellulose), Speisesalz, modifizierte Stärke, Stärke, Säuerungsmittel (Citronensäure), Eisendiphosphat, Vitamin B12. Kann Spuren von Milch, Ei und Nüssen enthalten. ¹Im Werk werden auch Milch- und Eiprodukte verarbeitet. Trotz aller Vorkehrungen kann dieses Produkt für MiIch- und Eiallergiker ungeeignet sein",
             "allergies": [
@@ -298,7 +330,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/nuggets/The-Vegetarian-Butcher-Vegane-Befl%C3%BCggel-Nuggets.png"
         },
         {
-            "id": 4,
+            "id": 33,
+            "category": "nuggets",
             "title": "Vivera - Vegane Nuggets",
             "ingredients": "56% rehydriertes SOJA- und WEIZENEIWEIß*, Cornflakes (Mais, Zucker, Salz, GERSTENMALZEXTRAKT), Sonnenblumenöl, Wasser, WEIZENSTÄRKE, Essig, Verdickungsmittel (Methylcellulose), natürliche Aromen, WEIZENMEHL, Meersalz, Zwiebel, Kartoffelfasern, getrockneter Glukosesirup, Salz, Dextrose, Konservierungsstoff (Natriumdiacetat), Maisstärke, Maltodextrin, Kreuzkümmel, Eisen(II)Gluconat, Gewürzextrakt, Kräuterextrakt, Vitamin B12",
             "allergies": [
@@ -310,7 +343,8 @@
     ],
     "sausages": [
         {
-            "id": 1,
+            "id": 34,
+            "category": "sausages",
             "title": "Garden Gourmet - Sensational Bratwurst",
             "ingredients": "Trinkasser, 14,9 % SOJAPROTEIN, pflanzliche Öle (Raps, Kokosnuss), 4,3 % SOJAPROTEIN-Isolat, natürliche Aromen, Gewürze (Knoblauch, weißer Pfeffer, Koriander, Majoran, Muskatnuss, Ingwer, schwarzer Pfeffer), Stabilisator (Methylcellulose), Branntweinessig, Apfelfasern, Kartoffelstärke, essbare Alginat-Hülle (Verdickungsmittel (Natriumalginat), Stabilisator (Calciumchlorid); Tapiokastärke), Frucht- und Pflanzenkonzentrate (Rote Beete, Karotte, Paprika, schwarze Johannisbeere), Speisesalz",
             "allergies": [
@@ -319,7 +353,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/sausages/Garden-Gourmet-Sensational-Bratwurst.png"
         },
         {
-            "id": 2,
+            "id": 35,
+            "category": "sausages",
             "title": "Like meat - Like Bratwurst",
             "ingredients": "Wasser, SOJAPROTEINKONZENTRAT 15%, Kokosfett, Sonnenblumenöl, Kartoffelflocken, essbare Hülle (Wasser, Überzugsmittel: Calciumalginat), Gewürze (Koriander, Majoran, Pfeffer), Gewürzextrakte, Flohsamenschalen, Würze, Verdickungsmittel: Methylcellulose, natürliches Aroma, Salz, Dextrose",
             "allergies": [
@@ -328,7 +363,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/sausages/Like-meat-Bratwurst.png"
         },
         {
-            "id": 3,
+            "id": 36,
+            "category": "sausages",
             "title": "Like meat - Like Curry Knacker",
             "ingredients": "Wasser, Currysauce 29% (Wasser, Saccharose, Tomatenmark, Branntweinessig, Verdickungsmittel (Agar-Agar, Johannisbrotkernmehl), Gewürze, Salz, Konservierungsstoff: Kaliumsorbat), SOJAPROTEINKONZENTRAT 10%, Kokosfett, essbare Hülle (Wasser, Überzugsmittel: Calciumalginat, Aroma), Sonnenblumenöl, Verdickungsmittel: Methyl-cellulose, Kartoffelflocken, Flohsamenschalen, Salz, natürliches Aroma, Gewürze, Würze, Gewürzextrakte, Dextrose",
             "allergies": [
@@ -337,14 +373,16 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/sausages/Like-meat-Curry-Knacker.png"
         },
         {
-            "id": 4,
+            "id": 37,
+            "category": "sausages",
             "title": "Like meat - Like Schinken Bratwurst",
             "ingredients": "Wasser, Erbsenproteinisolat 11,8%, Erbsenfaser, Kokosfett, Sonnenblumenöl, essbare Hülle (Wasser, Überzugsmittel: Calciumalginat, Aroma), Kartoffelflocken, Verdickungsmittel: Methylcellulose, Gewürzextrakte, Gewürze, natürliches Aroma, Karamellzuckersirup, färbende Lebensmittel (Konzentrate von Rettich, Apfel, schwarzer Johannisbeere), Maltodextrin, geräuchertes Maltodextrin, Salz, Rauchsalz (Salz, Rauch), Farbstoff: Eisenoxid. Kann Spuren von SOJA enthalten",
             "allergies": [],
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/sausages/Like-meat-Schinken-Bratwurst.png"
         },
         {
-            "id": 5,
+            "id": 38,
+            "category": "sausages",
             "title": "Wheaty - Vegane Frankenberger",
             "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 82%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Steinsalz, Seitan* (Wasser, WEIZENeiweiß*) 81%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Hefeextrakt*, Steinsalz, WEIZENstärke*, Zwiebeln*, Gewürze*, Verdickungsmittel: Johannisbrotkernmehl*",
             "allergies": [
@@ -353,7 +391,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/sausages/Wheaty-Vegane-Frankenberger.png"
         },
         {
-            "id": 6,
+            "id": 39,
+            "category": "sausages",
             "title": "Wheaty - Vegane Weenies",
             "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 82%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Hefeextrakt*, Steinsalz, Gewürze* (enthält SENF*), Zwiebeln*, Verdickungsmittel: Johannisbrotkernmehl*, Paprikaextrakt*, Buchenholzrauch",
             "allergies": [
@@ -362,7 +401,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/sausages/Wheaty-Vegane-Weenies.png"
         },
         {
-            "id": 7,
+            "id": 40,
+            "category": "sausages",
             "title": "Wheaty - Vegane Weenies",
             "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 82%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Hefeextrakt*, Steinsalz, Gewürze* (enthält SENF*), Zwiebeln*, Verdickungsmittel: Johannisbrotkernmehl*, Paprikaextrakt*, Buchenholzrauch",
             "allergies": [
@@ -371,7 +411,8 @@
             "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/sausages/Wheaty-Vegane-Weenies.png"
         },
         {
-            "id": 8,
+            "id": 41,
+            "category": "sausages",
             "title": "Wheaty - Vegane Weiße",
             "ingredients": "Seitan* (Wasser, WEIZENeiweiß*) 82%, ölsäurereiches (High-Oleic) Sonnenblumenöl*, Steinsalz, Hefeextrakt*, Zwiebeln*, Gewürze*, Verdickungsmittel Guarkernmehl*, Petersilie*, Zitrone*",
             "allergies": [
