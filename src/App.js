@@ -94,7 +94,7 @@ export default function App() {
       ...favorites.slice(0, index),
       ...favorites.slice(index + 1),
     ]) : 
-    setFavorites([...favorites, { ...favorite, isFavorite: !favorite.isFavorite }])
+    setFavorites([...favorites, { ...favorite }])
   }
 
   function saveLocally(key, arrayOfObjects) {
