@@ -2,13 +2,13 @@
 
 exports[`Product renders correctly 1`] = `
 <div
-  className="sc-AxjAm jTSiGe"
+  className="sc-AxjAm hKEAfa"
 >
   <h3
-    className="sc-AxirZ FzsEO"
+    className="sc-AxirZ jpPKGG"
   />
   <img
-    className="sc-AxiKw erJOzJ"
+    className="sc-AxiKw kFMpIF"
   />
 </div>
 `;

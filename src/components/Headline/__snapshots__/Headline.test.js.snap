@@ -2,16 +2,16 @@
 
 exports[`Headline renders correctly 1`] = `
 <section
-  className="sc-AxjAm kQvphW"
+  className="sc-AxjAm cmCotq"
 >
   <svg
-    className="sc-AxiKw kteWBu"
+    className="sc-AxiKw eigldL"
     onClick={[Function]}
   >
     back-arrow.svg
   </svg>
   <h2
-    className="sc-AxirZ DxuTA"
+    className="sc-AxirZ sqNNI"
   >
     Category name
   </h2>

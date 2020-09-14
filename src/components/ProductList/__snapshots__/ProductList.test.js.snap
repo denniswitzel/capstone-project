@@ -1,14 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProductList renders correctly 1`] = `
-<div
-  className="sc-AxjAm jTSiGe"
+<section
+  className="sc-AxjAm cmCotq"
 >
-  <h3
-    className="sc-AxirZ FzsEO"
-  />
-  <img
-    className="sc-AxiKw erJOzJ"
-  />
-</div>
+  <svg
+    className="sc-AxiKw eigldL"
+    onClick={[Function]}
+  >
+    back-arrow.svg
+  </svg>
+  <h2
+    className="sc-AxirZ sqNNI"
+  >
+    Category name
+  </h2>
+</section>
 `;

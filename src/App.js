@@ -1,91 +1,80 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import styled from 'styled-components/macro'
+import useFetch from '../src/hooks/useFetch'
 import ProductOverview from './components/Categories/Categories'
-import { Switch, Route } from 'react-router-dom'
+import Detailpage from './components/Detailpage/Detailpage'
 import ProductList from './components/ProductList/ProductList'
-import burgers from './mocks/burger.json'
-import kebabs from './mocks/kebab.json'
-import minced from './mocks/minced.json'
-import nuggets from './mocks/nuggets.json'
-import sausages from './mocks/sausages.json'
-import productCategories from './mocks/category.json'
 import { ReactComponent as Logo } from './images/icons/logo.svg'
-import styled from 'styled-components'
-import Headline from './components/Headline/Headline'
 
 export default function App() {
+  const burgers = useFetch('burger')
+  const kebabs = useFetch('kebab')
+  const minced = useFetch('minced')
+  const nuggets = useFetch('nuggets')
+  const sausages = useFetch('sausages')
+  const categories = useFetch('categories')
+
   return (
     <Switch>
       <Route exact path="/">
         <LogoStyled />
-        {productCategories.map((category, index) => (
+        {categories.map((category) => (
           <ProductOverview
-            key={index}
+            key={category.id}
             productIcon={category.icon}
             productName={category.name}
           />
         ))}
       </Route>
-      <Route path="/burger">
-        <>
-          <Headline headline="Burger" />
-          {burgers.map((burger, index) => (
-            <ProductList
-              title={burger.title}
-              image={burger.image}
-              key={index}
-            />
-          ))}
-        </>
+      <Route exact path="/burger">
+        <ProductList
+          headline={'Burger'}
+          product={burgers}
+          category={'burger'}
+        />
       </Route>
-      <Route path="/cold-cuts">
-        <>
-          <Headline headline="Cold-Cuts" />
-          <SubheadlineStyled>Coming soon</SubheadlineStyled>
-        </>
+      <Route path={'/burger/:id'}>
+        <Detailpage category={'burger'} />
       </Route>
-      <Route path="/kebab">
-        <>
-          <Headline headline="Kebab" />
-          {kebabs.map((kebab, index) => (
-            <ProductList title={kebab.title} image={kebab.image} key={index} />
-          ))}
-        </>
+      <Route exact path="/cold-cuts">
+        <ProductList
+          headline={'Cold-Cuts'}
+          product={burgers}
+          category={'burger'}
+        />
       </Route>
-      <Route path="/minced">
-        <>
-          <Headline headline="Minced" />
-          {minced.map((minced, index) => (
-            <ProductList
-              title={minced.title}
-              image={minced.image}
-              key={index}
-            />
-          ))}
-        </>
+      <Route exact path="/kebab">
+        <ProductList headline={'Kebab'} product={kebabs} category={'kebab'} />
       </Route>
-      <Route path="/nuggets">
-        <>
-          <Headline headline="Nuggets" />
-          {nuggets.map((nugget, index) => (
-            <ProductList
-              title={nugget.title}
-              image={nugget.image}
-              key={index}
-            />
-          ))}
-        </>
+      <Route path={'/kebab/:id'}>
+        <Detailpage category={'kebab'} />
       </Route>
-      <Route path="/sausages">
-        <>
-          <Headline headline="Sausages" />
-          {sausages.map((sausage, index) => (
-            <ProductList
-              title={sausage.title}
-              image={sausage.image}
-              key={index}
-            />
-          ))}
-        </>
+      <Route exact path="/minced">
+        <ProductList headline={'Minced'} product={minced} category={'minced'} />
+      </Route>
+      <Route path={'/minced/:id'}>
+        <Detailpage category={'minced'} />
+      </Route>
+      <Route exact path="/nuggets">
+        <ProductList
+          headline={'Nuggets'}
+          product={nuggets}
+          category={'nuggets'}
+        />
+      </Route>
+      <Route path={'/nuggets/:id'}>
+        <Detailpage category={'nuggets'} />
+      </Route>
+      <Route exact path="/sausages">
+        <ProductList
+          headline={'Sausages'}
+          product={sausages}
+          category={'sausages'}
+        />
+      </Route>
+      <Route path={'/sausages/:id'}>
+        <Detailpage category={'sausages'} />
       </Route>
     </Switch>
   )
@@ -94,10 +83,4 @@ export default function App() {
 const LogoStyled = styled(Logo)`
   grid-column: 1/3;
   margin: 40px 0;
-`
-const SubheadlineStyled = styled.h3`
-  color: #4bdb80;
-  margin: 100px 0 0 0px;
-  text-align: center;
-  grid-column: 1/3;
 `

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailPage renders correctly 1`] = `
+<section>
+  <section
+    className="sc-AxjAm jGUptd"
+  >
+    <svg
+      className="sc-AxmLO dpGSMw"
+      onClick={[Function]}
+    >
+      back-arrow.svg
+    </svg>
+    <h2
+      className="sc-AxirZ cpLnVQ"
+    />
+    <img
+      className="sc-AxiKw gXUYYA"
+    />
+  </section>
+  <section
+    className="sc-AxhCb crHKRx"
+  >
+    <h3
+      className="sc-AxhUy idvKOt"
+    >
+      Ingredients
+    </h3>
+    <p
+      className="sc-AxgMl gPMzqP"
+    />
+    <h3
+      className="sc-AxhUy idvKOt"
+    />
+  </section>
+</section>
+`;

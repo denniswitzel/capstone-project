@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Product({ title, image }) {
+export default function Product({ title, image, onClick }) {
   return (
-    <ProductWrapper>
+    <ProductWrapper onClick={onClick}>
       <ProductName>{title}</ProductName>
       <ProductImage src={image} alt={title} />
     </ProductWrapper>

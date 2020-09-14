@@ -7,6 +7,8 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "create-react-app": "^3.4.1",
+    "dotenv": "^8.2.0",
+    "json-server": "^0.16.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -21,10 +23,15 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "json": "json-server -p 4000 db.json",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:cypress/recommended"
+    ]
   },
   "browserslist": {
     "production": [
@@ -48,6 +55,8 @@
     "@storybook/react": "^6.0.20",
     "@testing-library/dom": "^7.23.0",
     "babel-loader": "^8.1.0",
+    "cypress": "^5.1.0",
+    "eslint-plugin-cypress": "^2.11.1",
     "react-is": "^16.13.1"
   }
 }
