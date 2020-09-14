@@ -106,7 +106,7 @@ const IngredientsList = styled.p`
 
 const AllergyContainer = styled.div`
   float: left;
-  margin: 15px 30px 0 0;
+  margin: 15px 30px 120px 0;
   text-align: center;
 
   svg {
