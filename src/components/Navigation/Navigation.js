@@ -8,11 +8,9 @@ export default function Navigation() {
 
     return (
     <>
-    {pathname !== '/favorites' &&  
-    (<NavLinkStyled to='/favorites'>
+    <NavLinkStyled disabled={pathname === '/favorites'} to='/favorites'>
         <Heart/>
-    </NavLinkStyled>)
-    }
+    </NavLinkStyled>
     </>
     )
 }
@@ -26,6 +24,7 @@ const NavLinkStyled = styled(NavLink)`
     border-radius: 50%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
+    pointer-events: ${({disabled}) => disabled ? 'none' : 'auto'};
     
     svg {
         fill: white;
