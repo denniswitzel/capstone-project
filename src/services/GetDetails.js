@@ -13,7 +13,7 @@ export default function GetDetails(category) {
   })
 
   const fetchDetail = async () => {
-    const fetchDetail = await fetch(`http://localhost:4000/${category}/${id}`)
+    const fetchDetail = await fetch(`https://my-json-server.typicode.com/denniswitzel/capstone-project/${category}/${id}`)
     const detail = await fetchDetail.json()
     setDetail(detail)
   }

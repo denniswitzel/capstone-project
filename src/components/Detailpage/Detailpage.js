@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
 import { ReactComponent as Gluten } from '../../images/icons/gluten.svg'
 import { ReactComponent as Soy } from '../../images/icons/soy.svg'
+import { ReactComponent as Heart } from '../../images/icons/heart.svg'
 import GetDetails from '../../services/GetDetails'
 import PropTypes from 'prop-types'
 
@@ -13,9 +14,8 @@ Detailpage.propTypes = {
   id: PropTypes.number,
 }
 
-export default function Detailpage({ category, id }) {
-  const { title, image, ingredients, allergies } = GetDetails(category, id)
-
+export default function Detailpage({ category, onFavoriteClick }) {
+  const product = GetDetails(category)
   const history = useHistory()
 
   function handleClick() {
@@ -23,21 +23,22 @@ export default function Detailpage({ category, id }) {
   }
 
   return (
-    <section>
+    <section key={product.id}>
       <ImageSection>
         <ArrowStyled onClick={handleClick} />
-        <ProductName>{title}</ProductName>
-        <ProductImage src={image} alt={title}/>
+        <ProductName>{product.title}</ProductName>
+        <ProductImage src={product.image} alt={product.title}/>
+        <HeartStyled onClick={() => onFavoriteClick(product)}/>
       </ImageSection>
       <ProductInformation>
         <Headline>Ingredients</Headline>
-        <IngredientsList>{ingredients}</IngredientsList>
-        {allergies?.length ? (
+        <IngredientsList>{product.ingredients}</IngredientsList>
+        {product.allergies?.length ? (
           <Headline>Allergies</Headline>
         ) : (
           <Headline></Headline>
         )}
-        {allergies?.map((allergy, index) => (
+        {product.allergies?.map((allergy, index) => (
           <AllergyContainer key={index}>
             {allergy === 'Gluten' ? <Gluten /> : <Soy />}
             <Allergies>{allergy}</Allergies>
@@ -106,7 +107,7 @@ const IngredientsList = styled.p`
 
 const AllergyContainer = styled.div`
   float: left;
-  margin: 15px 30px 0 0;
+  margin: 15px 30px 120px 0;
   text-align: center;
 
   svg {
@@ -126,5 +127,15 @@ const ArrowStyled = styled(Arrow)`
   position: absolute;
   left: 30px;
   margin-top: 30px;
+  cursor: pointer;
+`
+const HeartStyled = styled(Heart)`
+  width: 40px;
+  position: absolute; 
+  top: 210px;
+  right: 90px;
+  stroke: #4BDB80;
+  fill: white;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   cursor: pointer;
 `
