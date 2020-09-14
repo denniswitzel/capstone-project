@@ -16,7 +16,7 @@ export default function App() {
   const categories = useFetch('categories')
 
   const [favorites, setFavorites] = useState(loadLocally('favorites') ?? [])
-
+  
   useEffect(() => {
     saveLocally('favorites', favorites)
   }, [favorites])
@@ -40,7 +40,7 @@ export default function App() {
         />
       </Route>
       <Route path={'/burger/:id'}>
-        <Detailpage category={'burger'} onFavoriteClick={toggleFavorite}/>
+        <Detailpage category={'burger'} onFavoriteClick={toggleFavorite} favorites={favorites}/>
       </Route>
       <Route exact path="/cold-cuts">
         <ProductList
@@ -94,7 +94,7 @@ export default function App() {
       ...favorites.slice(0, index),
       ...favorites.slice(index + 1),
     ]) : 
-    setFavorites([...favorites, { ...favorite }])
+    setFavorites([...favorites, { ...favorite, isFavorite: !favorite.isFavorite }])
   }
 
   function saveLocally(key, arrayOfObjects) {

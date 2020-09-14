@@ -1,13 +1,19 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import { ReactComponent as Heart } from '../../images/icons/heart.svg'
 
 export default function Navigation() {
+    const {pathname} = useLocation()
+
     return (
-    <NavLinkStyled to='/favorites'>
+    <>
+    {pathname !== '/favorites' &&  
+    (<NavLinkStyled to='/favorites'>
         <Heart/>
-    </NavLinkStyled>
+    </NavLinkStyled>)
+    }
+    </>
     )
 }
 

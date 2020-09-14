@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
@@ -14,10 +14,12 @@ Detailpage.propTypes = {
   id: PropTypes.number,
 }
 
-export default function Detailpage({ category, onFavoriteClick }) {
+export default function Detailpage({ category, onFavoriteClick, favorites }) {
   const product = GetDetails(category)
   const history = useHistory()
 
+  const isFavored = favorites.find(favoriteItem => favoriteItem.id === product.id)
+  
   function handleClick() {
     history.goBack()
   }
@@ -28,7 +30,7 @@ export default function Detailpage({ category, onFavoriteClick }) {
         <ArrowStyled onClick={handleClick} />
         <ProductName>{product.title}</ProductName>
         <ProductImage src={product.image} alt={product.title}/>
-        <HeartStyled onClick={() => onFavoriteClick(product)}/>
+        <HeartStyled favored={isFavored} onClick={() => onFavoriteClick(product)}/>
       </ImageSection>
       <ProductInformation>
         <Headline>Ingredients</Headline>
@@ -135,7 +137,7 @@ const HeartStyled = styled(Heart)`
   top: 210px;
   right: 90px;
   stroke: #4BDB80;
-  fill: white;
+  fill: ${({favored}) => favored ? '#4BDB80' : '#ffffff'};
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   cursor: pointer;
 `
