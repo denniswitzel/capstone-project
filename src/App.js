@@ -47,7 +47,7 @@ export default function App() {
         <ProductList
           headline={'Cold-Cuts'}
         />
-        <ComingSoon>Coming soon</ComingSoon>
+        <StyledHeadline>Coming soon</StyledHeadline>
       </Route>
       <Route exact path="/kebab">
         <ProductList headline={'Kebab'} product={kebabs} />
@@ -80,10 +80,15 @@ export default function App() {
         <Detailpage category={'sausages'} onFavoriteClick={toggleFavorite} favorites={favorites}/>
       </Route>
       <Route path="/favorites">
-        <ProductList
+        {favorites.length ? <ProductList
           headline={'Favorites'}
           product={favorites}
-        />
+        /> : 
+        <>
+        <ProductList headline={'Favorites'}/>
+        <StyledHeadline>You have no favorites</StyledHeadline>
+        </>
+        }
       </Route>
     </Switch>
   )
@@ -118,7 +123,7 @@ const LogoStyled = styled(Logo)`
   margin: 40px 0;
 `
 
-const ComingSoon = styled.h2`
+const StyledHeadline = styled.h2`
   grid-column: 1/3;
   margin-top: 100px;
   font-weight: 300;
