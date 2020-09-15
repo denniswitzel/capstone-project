@@ -1,0 +1,8 @@
+{
+    "short_name": "Planternate",
+    "name": "Planternate: Plant based meat replacement",
+    "description": "Plant based meat replacement",
+    "start_url": "/",
+    "display": "fullscreen",
+    "scope": "/"
+}

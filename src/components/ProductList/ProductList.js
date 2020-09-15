@@ -11,7 +11,7 @@ ProductList.propTypes = {
   id: PropTypes.number,
 }
 
-export default function ProductList({ product, category, headline }) {
+export default function ProductList({ product, headline }) {
   const history = useHistory()
 
   return (
@@ -19,7 +19,7 @@ export default function ProductList({ product, category, headline }) {
       <Headline headline={headline} />
       {product?.map((productItem) => (
         <Product
-          onClick={() => history.push(`/${category}/${productItem.id}`)}
+          onClick={() => history.push(`/${productItem.category}/${productItem.id}`)}
           key={productItem.id}
           title={productItem.title}
           image={productItem.image}

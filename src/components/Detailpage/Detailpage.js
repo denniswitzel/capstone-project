@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
 import { ReactComponent as Gluten } from '../../images/icons/gluten.svg'
 import { ReactComponent as Soy } from '../../images/icons/soy.svg'
+import { ReactComponent as Heart } from '../../images/icons/heart.svg'
 import GetDetails from '../../services/GetDetails'
 import PropTypes from 'prop-types'
 
@@ -13,42 +14,50 @@ Detailpage.propTypes = {
   id: PropTypes.number,
 }
 
-export default function Detailpage({ category, id }) {
-  const { title, image, ingredients, allergies } = GetDetails(category, id)
-
+export default function Detailpage({ category, onFavoriteClick, favorites }) {
+  const product = GetDetails(category)
   const history = useHistory()
 
+  const isFavored = favorites.find(favoriteItem => favoriteItem.id === product.id)
+  
   function handleClick() {
     history.goBack()
   }
 
   return (
-    <section>
-      <ImageSection>
+    <DetailWrapper key={product.id}>
+      <ColoredBackground>
         <ArrowStyled onClick={handleClick} />
-        <ProductName>{title}</ProductName>
-        <ProductImage src={image} alt={title}/>
-      </ImageSection>
+        <ProductName>{product.title}</ProductName>
+      </ColoredBackground>
+      <ImageWrapper>
+        <ProductImage src={product.image} alt={product.title}/>
+        <HeartStyled favored={isFavored} onClick={() => onFavoriteClick(product)}/>
+      </ImageWrapper>
       <ProductInformation>
         <Headline>Ingredients</Headline>
-        <IngredientsList>{ingredients}</IngredientsList>
-        {allergies?.length ? (
+        <IngredientsList>{product.ingredients}</IngredientsList>
+        {product.allergies?.length ? (
           <Headline>Allergies</Headline>
         ) : (
           <Headline></Headline>
         )}
-        {allergies?.map((allergy, index) => (
+        {product.allergies?.map((allergy, index) => (
           <AllergyContainer key={index}>
             {allergy === 'Gluten' ? <Gluten /> : <Soy />}
             <Allergies>{allergy}</Allergies>
           </AllergyContainer>
         ))}
       </ProductInformation>
-    </section>
+    </DetailWrapper>
   )
 }
 
-const ImageSection = styled.section`
+const DetailWrapper = styled.section`
+  grid-column: 1/3;
+`
+
+const ColoredBackground = styled.section`
   display: flex;
   background: linear-gradient(
     45deg,
@@ -57,7 +66,7 @@ const ImageSection = styled.section`
   );
   border-radius: 0 0 20px 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  width: 100%;
+  width: 100vw;
   grid-column: 1/3;
 `
 const ProductName = styled.h2`
@@ -66,17 +75,14 @@ const ProductName = styled.h2`
   line-height: 1.5;
   color: white;
   margin: 100px 20px 30px 30px;
-  width: 40vw;
+  width: 45vw;
 `
 
 const ProductImage = styled.img`
   height: 180px;
   text-align: center;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
-  position: relative;
-  top: 80px;
-  right: 30px;
-  margin-left: 20px;
+  margin: -120px 30px 0 20px;
 `
 const ProductInformation = styled.section`
   padding: 80px 50px 20px 50px;
@@ -127,4 +133,20 @@ const ArrowStyled = styled(Arrow)`
   left: 30px;
   margin-top: 30px;
   cursor: pointer;
+`
+
+const ImageWrapper = styled.section`
+    float: right;
+    position: relative;
+  `
+
+const HeartStyled = styled(Heart)`
+  width: 40px;
+  stroke: #4BDB80;
+  fill: ${({favored}) => favored ? '#4BDB80' : '#F4F4F4'};
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  cursor: pointer;
+  position: absolute;
+  right: 95px;
+  -webkit-tap-highlight-color: transparent;
 `

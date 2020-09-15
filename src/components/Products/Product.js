@@ -32,10 +32,10 @@ const ProductWrapper = styled.div`
   :nth-child(2n + 0) {
     justify-self: end;
     margin-right: 15px;
-  }
 
-  :last-child {
-    margin-bottom: 100px;
+    img:last-child {
+    margin-bottom: 110px;
+    }
   }
 `
 

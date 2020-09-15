@@ -4,7 +4,7 @@ export default function useFetch(urlName) {
   const [data, setData] = useState([].sort((a, b) => a.title.localeCompare(b.title)))
 
   useEffect(() => {
-    fetch(`http://localhost:4000/${urlName}`)
+    fetch(`https://my-json-server.typicode.com/denniswitzel/capstone-project/${urlName}`)
       .then((res) => res.json())
       .then((data) =>
         setData(data)
