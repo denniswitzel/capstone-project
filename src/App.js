@@ -82,7 +82,7 @@ export default function App() {
       <Route path="/favorites">
         {favorites.length ? <ProductList
           headline={'Favorites'}
-          product={favorites}
+          product={favorites.sort((a, b) => a.title.localeCompare(b.title))}
         /> : 
         <>
         <ProductList headline={'Favorites'}/>

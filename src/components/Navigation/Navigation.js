@@ -23,14 +23,16 @@ const NavLinkStyled = styled(NavLink)`
     bottom: 30px;
     border-radius: 50%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    margin: 0 auto;
     pointer-events: ${({disabled}) => disabled ? 'none' : 'auto'};
+    -webkit-tap-highlight-color: transparent;
     
     svg {
         fill: ${({disabled}) => disabled ? 'white' : '#4BDB80'};
         stroke: transparent;
         width: 40px;
         margin-top: -3px;
+        -webkit-tap-highlight-color: transparent;
     }
   
 `
