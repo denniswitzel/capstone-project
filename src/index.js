@@ -8,7 +8,7 @@ import Navigation from './components/Navigation/Navigation'
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyles />
+    <GlobalStyles/>
     <Router>
       <App />
       <Navigation />
