@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import useFetch from '../src/hooks/useFetch'
-import ProductOverview from './components/Categories/Categories'
+import Categories from './components/Categories/Categories'
 import Detailpage from './components/Detailpage/Detailpage'
 import ProductList from './components/ProductList/ProductList'
 import { ReactComponent as Logo } from './images/icons/logo.svg'
@@ -20,13 +20,14 @@ export default function App() {
   useEffect(() => {
     saveLocally('favorites', favorites)
   }, [favorites])
-  
+
+
   return (
     <Switch>
       <Route exact path="/">
         <LogoStyled />
         {categories.map((category) => (
-          <ProductOverview
+          <Categories
             key={category.name}
             productIcon={category.icon}
             productName={category.name}
@@ -45,20 +46,20 @@ export default function App() {
       <Route exact path="/cold-cuts">
         <ProductList
           headline={'Cold-Cuts'}
-          product={burgers}
         />
+        <ComingSoon>Coming soon</ComingSoon>
       </Route>
       <Route exact path="/kebab">
         <ProductList headline={'Kebab'} product={kebabs} />
       </Route>
       <Route path={'/kebab/:id'}>
-        <Detailpage category={'kebab'} onFavoriteClick={toggleFavorite}/>
+        <Detailpage category={'kebab'} onFavoriteClick={toggleFavorite} favorites={favorites}/>
       </Route>
       <Route exact path="/minced">
         <ProductList headline={'Minced'} product={minced} />
       </Route>
       <Route path={'/minced/:id'}>
-        <Detailpage category={'minced'} onFavoriteClick={toggleFavorite}/>
+        <Detailpage category={'minced'} onFavoriteClick={toggleFavorite} favorites={favorites}/>
       </Route>
       <Route exact path="/nuggets">
         <ProductList
@@ -67,7 +68,7 @@ export default function App() {
         />
       </Route>
       <Route path={'/nuggets/:id'}>
-        <Detailpage category={'nuggets'} onFavoriteClick={toggleFavorite}/>
+        <Detailpage category={'nuggets'} onFavoriteClick={toggleFavorite} favorites={favorites}/>
       </Route>
       <Route exact path="/sausages">
         <ProductList
@@ -76,7 +77,7 @@ export default function App() {
         />
       </Route>
       <Route path={'/sausages/:id'}>
-        <Detailpage category={'sausages'} onFavoriteClick={toggleFavorite}/>
+        <Detailpage category={'sausages'} onFavoriteClick={toggleFavorite} favorites={favorites}/>
       </Route>
       <Route path="/favorites">
         <ProductList
@@ -94,7 +95,7 @@ export default function App() {
       ...favorites.slice(0, index),
       ...favorites.slice(index + 1),
     ]) : 
-    setFavorites([...favorites, { ...favorite, isFavorite: !favorite.isFavorite }])
+    setFavorites([...favorites, { ...favorite }])
   }
 
   function saveLocally(key, arrayOfObjects) {
@@ -115,4 +116,11 @@ export default function App() {
 const LogoStyled = styled(Logo)`
   grid-column: 1/3;
   margin: 40px 0;
+`
+
+const ComingSoon = styled.h2`
+  grid-column: 1/3;
+  margin-top: 100px;
+  font-weight: 300;
+  color: #4BDB80;
 `

@@ -25,13 +25,15 @@ export default function Detailpage({ category, onFavoriteClick, favorites }) {
   }
 
   return (
-    <section key={product.id}>
-      <ImageSection>
+    <DetailWrapper key={product.id}>
+      <ColoredBackground>
         <ArrowStyled onClick={handleClick} />
         <ProductName>{product.title}</ProductName>
+      </ColoredBackground>
+      <ImageWrapper>
         <ProductImage src={product.image} alt={product.title}/>
         <HeartStyled favored={isFavored} onClick={() => onFavoriteClick(product)}/>
-      </ImageSection>
+      </ImageWrapper>
       <ProductInformation>
         <Headline>Ingredients</Headline>
         <IngredientsList>{product.ingredients}</IngredientsList>
@@ -47,11 +49,15 @@ export default function Detailpage({ category, onFavoriteClick, favorites }) {
           </AllergyContainer>
         ))}
       </ProductInformation>
-    </section>
+    </DetailWrapper>
   )
 }
 
-const ImageSection = styled.section`
+const DetailWrapper = styled.section`
+  grid-column: 1/3;
+`
+
+const ColoredBackground = styled.section`
   display: flex;
   background: linear-gradient(
     45deg,
@@ -60,7 +66,7 @@ const ImageSection = styled.section`
   );
   border-radius: 0 0 20px 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  width: 100%;
+  width: 100vw;
   grid-column: 1/3;
 `
 const ProductName = styled.h2`
@@ -69,17 +75,14 @@ const ProductName = styled.h2`
   line-height: 1.5;
   color: white;
   margin: 100px 20px 30px 30px;
-  width: 40vw;
+  width: 45vw;
 `
 
 const ProductImage = styled.img`
   height: 180px;
   text-align: center;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
-  position: relative;
-  top: 80px;
-  right: 30px;
-  margin-left: 20px;
+  margin: -120px 30px 0 20px;
 `
 const ProductInformation = styled.section`
   padding: 80px 50px 20px 50px;
@@ -131,13 +134,18 @@ const ArrowStyled = styled(Arrow)`
   margin-top: 30px;
   cursor: pointer;
 `
+
+const ImageWrapper = styled.section`
+    float: right;
+    position: relative;
+  `
+
 const HeartStyled = styled(Heart)`
   width: 40px;
-  position: absolute; 
-  top: 210px;
-  right: 90px;
   stroke: #4BDB80;
-  fill: ${({favored}) => favored ? '#4BDB80' : '#ffffff'};
+  fill: ${({favored}) => favored ? '#4BDB80' : '#F4F4F4'};
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   cursor: pointer;
+  position: absolute;
+  right: 95px;
 `

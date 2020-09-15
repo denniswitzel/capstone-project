@@ -45,7 +45,7 @@ const HeadlineStyled = styled.h2`
   max-width: 300px;
 `
 const ArrowStyled = styled(Arrow)`
-  fill: #dbdbdb;
+  fill: #8E9091;
   position: absolute;
   left: 30px;
   margin-top: 10px;

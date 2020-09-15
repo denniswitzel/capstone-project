@@ -16,7 +16,7 @@ export default function Navigation() {
 }
 
 const NavLinkStyled = styled(NavLink)`
-    background: linear-gradient(45deg,rgba(75, 219, 164, 1) 0%, rgba(75, 219, 128, 1) 100%);
+    background: ${({disabled}) => disabled ? '#4BDB80' : 'white'};
     width: 90px;
     height: 90px;
     position: fixed;
@@ -27,7 +27,7 @@ const NavLinkStyled = styled(NavLink)`
     pointer-events: ${({disabled}) => disabled ? 'none' : 'auto'};
     
     svg {
-        fill: white;
+        fill: ${({disabled}) => disabled ? 'white' : '#4BDB80'};
         stroke: transparent;
         width: 40px;
         margin-top: -3px;
