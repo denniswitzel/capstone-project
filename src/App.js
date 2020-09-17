@@ -27,8 +27,8 @@ export default function App() {
     <Switch>
       <Route exact path="/">
         <LogoStyled />
-        {categories.map(({name, icon}) => (
-          <Categories key={name} categoryIcon={icon} categoryName={name}/>
+        {categories.map(({name, icon}, index) => (
+          <Categories key={index} categoryIcon={icon} categoryName={name}/>
         ))}
       </Route>
 
@@ -83,6 +83,7 @@ function loadLocally(key) {
 }
 
 const LogoStyled = styled(Logo)`
+  width: 60vw;
   grid-column: 1/3;
   margin: 40px 0;
 `

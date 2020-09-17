@@ -134,7 +134,7 @@ const Allergies = styled.p`
 const ArrowStyled = styled(Arrow)`
   fill: #ffffff;
   position: absolute;
-  left: 50px;
+  left: 10%;
   margin-top: 30px;
   cursor: pointer;
 `

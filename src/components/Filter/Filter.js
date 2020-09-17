@@ -22,11 +22,11 @@ const ButtonWrapper = styled.section`
 `
 
 const FilterButton = styled.button`
-    width: 85px;
+    width: 25vw;
     height: 35px;
     border: 2px solid #4BDB80;
-    color: ${({active}) => active ? 'white' : '#4BDB80'};
+    color: ${({active}) => active ? '#FFFFFF' : '#4BDB80'};
     border-radius: 20px;
-    margin: 0 15px;
+    margin: 20px 10px 0 10px;
     background: ${({active}) => active ? '#4BDB80' : '#F4F4F4'};
 `

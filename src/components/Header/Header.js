@@ -49,7 +49,7 @@ const HeadlineStyled = styled.h2`
 const ArrowStyled = styled(Arrow)`
   fill: #8E9091;
   position: absolute;
-  left: 50px;
+  left: 10%;
   margin-top: 10px;
   cursor: pointer;
 `
