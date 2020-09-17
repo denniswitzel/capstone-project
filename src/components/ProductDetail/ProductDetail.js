@@ -1,55 +1,58 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
 import { ReactComponent as Gluten } from '../../images/icons/gluten.svg'
 import { ReactComponent as Soy } from '../../images/icons/soy.svg'
 import { ReactComponent as Heart } from '../../images/icons/heart.svg'
-import GetDetails from '../../services/GetDetails'
 import PropTypes from 'prop-types'
 
 
-Detailpage.propTypes = {
-  category: PropTypes.string,
-  id: PropTypes.number,
+ProductDetail.propTypes = {
+  product: PropTypes.array,
+  onFavoriteClick: PropTypes.func,
+  favorites: PropTypes.array,
 }
 
-export default function Detailpage({ category, onFavoriteClick, favorites }) {
-  const product = GetDetails(category)
+export default function ProductDetail({ product, onFavoriteClick, favorites }) {
+  const { id } = useParams()
+  const productItem = product?.filter(product => JSON.stringify(product.id) === id)
   const history = useHistory()
-
-  const isFavored = favorites.find(favoriteItem => favoriteItem.id === product.id)
   
   function handleClick() {
     history.goBack()
   }
 
   return (
-    <DetailWrapper key={product.id}>
+      <>
+    {productItem?.map((productItem) => (
+    <DetailWrapper key={productItem.id}>
       <ColoredBackground>
         <ArrowStyled onClick={handleClick} />
-        <ProductName>{product.title}</ProductName>
+        <ProductName>{productItem.title}</ProductName>
       </ColoredBackground>
       <ImageWrapper>
-        <ProductImage src={product.image} alt={product.title}/>
-        <HeartStyled favored={isFavored} onClick={() => onFavoriteClick(product)}/>
+        <ProductImage src={productItem.image} alt={productItem.title}/>
+        <HeartStyled favored={favorites?.find(favoriteItem => favoriteItem.id === productItem.id)} onClick={() => onFavoriteClick(productItem)}/>
       </ImageWrapper>
       <ProductInformation>
         <Headline>Ingredients</Headline>
-        <IngredientsList>{product.ingredients}</IngredientsList>
-        {product.allergies?.length ? (
+        <IngredientsList>{productItem.ingredients}</IngredientsList>
+        {productItem.allergies?.length ? (
           <Headline>Allergies</Headline>
         ) : (
           <Headline></Headline>
         )}
-        {product.allergies?.map((allergy, index) => (
+        {productItem.allergies?.map((allergy, index) => (
           <AllergyContainer key={index}>
-            {allergy === 'Gluten' ? <Gluten /> : <Soy />}
+            {allergy === 'gluten' ? <Gluten /> : <Soy />}
             <Allergies>{allergy}</Allergies>
           </AllergyContainer>
         ))}
       </ProductInformation>
     </DetailWrapper>
+    ))}
+    </>
   )
 }
 
@@ -126,11 +129,12 @@ const Allergies = styled.p`
   font-weight: 300;
   text-align: left;
   margin: 0;
+  text-transform: capitalize;
 `
 const ArrowStyled = styled(Arrow)`
   fill: #ffffff;
   position: absolute;
-  left: 30px;
+  left: 50px;
   margin-top: 30px;
   cursor: pointer;
 `

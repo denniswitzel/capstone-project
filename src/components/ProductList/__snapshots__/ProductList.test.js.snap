@@ -5,7 +5,7 @@ exports[`ProductList renders correctly 1`] = `
   className="sc-AxjAm cmCotq"
 >
   <svg
-    className="sc-AxiKw eigldL"
+    className="sc-AxiKw ixfOfj"
     onClick={[Function]}
   >
     back-arrow.svg
@@ -13,7 +13,14 @@ exports[`ProductList renders correctly 1`] = `
   <h2
     className="sc-AxirZ sqNNI"
   >
-    Category name
+    CATEGORY NAME
   </h2>
+  <svg
+    active="false"
+    className="sc-AxhCb drMDeW"
+    onClick={[Function]}
+  >
+    filter.svg
+  </svg>
 </section>
 `;

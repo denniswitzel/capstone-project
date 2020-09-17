@@ -23,20 +23,6 @@ const ProductWrapper = styled.div`
   padding-top: 15px;
   display: inline-block;
   margin: 25px 0 50px 0;
-
-  :nth-child(2n + 1) {
-    justify-self: start;
-    margin-left: 15px;
-  }
-
-  :nth-child(2n + 0) {
-    justify-self: end;
-    margin-right: 15px;
-
-    img:last-child {
-    margin-bottom: 110px;
-    }
-  }
 `
 
 const ProductName = styled.h3`
@@ -55,4 +41,8 @@ const ProductImage = styled.img`
   margin-top: 10px;
   -webkit-filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+
+  :last-child {
+    margin-bottom: 110px;
+    }
 `

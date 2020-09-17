@@ -1,19 +1,19 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Headline from './Headline'
+import Header from './Header'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
-describe('Headline', () => {
-  const headline = 'Burgers'
+describe('Header', () => {
+  const headline = 'BURGER'
 
   it('display the headline and an example event', () => {
-    const { getByText } = render(<Headline headline={headline} />)
+    const { getByText } = render(<Header headline={headline} />)
     expect(getByText(headline)).toBeInTheDocument()
   })
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Headline />)
+    const tree = renderer.create(<Header />)
     expect(tree).toMatchSnapshot()
   })
 })

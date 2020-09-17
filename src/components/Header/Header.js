@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
+import { ReactComponent as Filter } from '../../images/icons/filter.svg'
 import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -12,7 +13,7 @@ Headline.defaultProps = {
   headline: 'Category name',
 }
 
-export default function Headline({ headline }) {
+export default function Headline({ headline, onToggle, active }) {
   const history = useHistory()
 
   function handleClick() {
@@ -22,7 +23,8 @@ export default function Headline({ headline }) {
   return (
     <Header>
       <ArrowStyled onClick={handleClick} />
-      <HeadlineStyled>{headline}</HeadlineStyled>
+      <HeadlineStyled>{headline.toUpperCase()}</HeadlineStyled>
+      <FilterStyled active={active} onClick={onToggle}/>
     </Header>
   )
 }
@@ -47,7 +49,15 @@ const HeadlineStyled = styled.h2`
 const ArrowStyled = styled(Arrow)`
   fill: #8E9091;
   position: absolute;
-  left: 30px;
+  left: 50px;
   margin-top: 10px;
   cursor: pointer;
+`
+const FilterStyled = styled(Filter)`
+  position: absolute;
+  right: 50px;
+  margin-top: 10px;
+  cursor: pointer;
+  stroke: ${({active}) => active === 'true' ? '#4BDB80' : '#8E9091'};
+  fill: transparent;
 `

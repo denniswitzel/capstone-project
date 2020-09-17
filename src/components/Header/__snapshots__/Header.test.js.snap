@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Headline renders correctly 1`] = `
+exports[`Header renders correctly 1`] = `
 <section
   className="sc-AxjAm cmCotq"
 >
   <svg
-    className="sc-AxiKw eigldL"
+    className="sc-AxiKw ixfOfj"
     onClick={[Function]}
   >
     back-arrow.svg
@@ -13,7 +13,12 @@ exports[`Headline renders correctly 1`] = `
   <h2
     className="sc-AxirZ sqNNI"
   >
-    Category name
+    CATEGORY NAME
   </h2>
+  <svg
+    className="sc-AxhCb drMDeW"
+  >
+    filter.svg
+  </svg>
 </section>
 `;

@@ -6,8 +6,7 @@ import '@testing-library/jest-dom/extend-expect'
 import { MemoryRouter } from 'react-router-dom'
 
 describe('ProductList', () => {
-  const headline = 'Burger'
-  const category = 'burger'
+  const headline = 'BURGER'
   const product = [
     {
       id: 1,
@@ -25,7 +24,6 @@ describe('ProductList', () => {
       <MemoryRouter>
         <ProductList
           product={product}
-          category={category}
           headline={headline}
         />
       </MemoryRouter>

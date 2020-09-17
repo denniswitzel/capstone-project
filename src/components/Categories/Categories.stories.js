@@ -1,10 +1,10 @@
 import React from 'react'
-import ProductOverview from './Categories'
+import Categories from './Categories'
 import { MemoryRouter } from 'react-router-dom'
 
 export default {
   title: 'Product Categories',
-  component: ProductOverview,
+  component: Categories,
 }
 
 const categories = [
@@ -43,9 +43,9 @@ const categories = [
 const Template = () => (
   <MemoryRouter>
     {categories.map((category) => (
-      <ProductOverview
-        productIcon={category.icon}
-        productName={category.name}
+      <Categories
+        categoryIcon={category.icon}
+        categoryName={category.name}
       />
     ))}
   </MemoryRouter>

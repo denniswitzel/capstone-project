@@ -4,16 +4,16 @@ import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types'
 
 Categories.propTypes = { 
-    productIcon: PropTypes.node,
-    productName: PropTypes.string,
+    categoryIcon: PropTypes.node,
+    categoryName: PropTypes.string,
 }
 
-export default function Categories({productIcon, productName}) {
+export default function Categories({categoryIcon, categoryName}) {
     return (    
-        <NavLinkStyled to={productName.toLowerCase()}>
+        <NavLinkStyled to={categoryName}>
         <ProductCategory>
-            <ProductIcon src={productIcon} alt={productName}/>
-            <ProductName>{productName}</ProductName>
+            <ProductIcon src={categoryIcon} alt={categoryName}/>
+            <ProductName>{categoryName.toUpperCase()}</ProductName>
         </ProductCategory>
         </NavLinkStyled>
     )

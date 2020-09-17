@@ -1,9 +1,137 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders correctly 1`] = `
-<svg
-  className="App__LogoStyled-sc-3vbase-0 dQQYxr"
->
-  logo.svg
-</svg>
+Array [
+  <svg
+    className="App__LogoStyled-sc-3vbase-0 dQQYxr"
+  >
+    planternate-logo.svg
+  </svg>,
+  <a
+    aria-current={null}
+    className="sc-AxjAm eNUlSU"
+    href="/burger"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-AxirZ lkIxKc"
+    >
+      <img
+        alt="burger"
+        className="sc-AxiKw iMhkxe"
+        src="https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/burger.svg"
+      />
+      <h2
+        className="sc-AxhCb fXSxQp"
+      >
+        BURGER
+      </h2>
+    </div>
+  </a>,
+  <a
+    aria-current={null}
+    className="sc-AxjAm eNUlSU"
+    href="/cold-cuts"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-AxirZ lkIxKc"
+    >
+      <img
+        alt="cold-cuts"
+        className="sc-AxiKw iMhkxe"
+        src="https://raw.githubusercontent.com/denniswitzel/capstone-project/717acadfd943ecc6bfc7f09650784cf00ff22b44/src/images/icons/coldcuts.svg"
+      />
+      <h2
+        className="sc-AxhCb fXSxQp"
+      >
+        COLD-CUTS
+      </h2>
+    </div>
+  </a>,
+  <a
+    aria-current={null}
+    className="sc-AxjAm eNUlSU"
+    href="/kebab"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-AxirZ lkIxKc"
+    >
+      <img
+        alt="kebab"
+        className="sc-AxiKw iMhkxe"
+        src="https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/kebab.svg"
+      />
+      <h2
+        className="sc-AxhCb fXSxQp"
+      >
+        KEBAB
+      </h2>
+    </div>
+  </a>,
+  <a
+    aria-current={null}
+    className="sc-AxjAm eNUlSU"
+    href="/minced"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-AxirZ lkIxKc"
+    >
+      <img
+        alt="minced"
+        className="sc-AxiKw iMhkxe"
+        src="https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/minced.svg"
+      />
+      <h2
+        className="sc-AxhCb fXSxQp"
+      >
+        MINCED
+      </h2>
+    </div>
+  </a>,
+  <a
+    aria-current={null}
+    className="sc-AxjAm eNUlSU"
+    href="/nuggets"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-AxirZ lkIxKc"
+    >
+      <img
+        alt="nuggets"
+        className="sc-AxiKw iMhkxe"
+        src="https://raw.githubusercontent.com/denniswitzel/capstone-project/f892d3d147b3c573a796dcb1a34298351806d8b5/src/images/icons/nuggets.svg"
+      />
+      <h2
+        className="sc-AxhCb fXSxQp"
+      >
+        NUGGETS
+      </h2>
+    </div>
+  </a>,
+  <a
+    aria-current={null}
+    className="sc-AxjAm eNUlSU"
+    href="/sausages"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-AxirZ lkIxKc"
+    >
+      <img
+        alt="sausages"
+        className="sc-AxiKw iMhkxe"
+        src="https://raw.githubusercontent.com/denniswitzel/capstone-project/67e1d46d4c80dc548f311f8b10cb5d5c61960c60/src/images/icons/sausage.svg"
+      />
+      <h2
+        className="sc-AxhCb fXSxQp"
+      >
+        SAUSAGES
+      </h2>
+    </div>
+  </a>,
+]
 `;
