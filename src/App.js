@@ -23,7 +23,6 @@ export default function App() {
     saveLocally('favorites', favorites)
   }, [favorites])
 
-
   return (
     <Switch>
       <Route exact path="/">

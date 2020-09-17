@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import Header from '../Header/Header'
 import Product from '../Products/Product'
 import Filter from '../Filter/Filter'
-import styled from 'styled-components'
+
 
 
 ProductList.propTypes = {
