@@ -4,5 +4,17 @@
     "description": "Plant based meat replacement",
     "start_url": "/",
     "display": "fullscreen",
-    "scope": "/"
+    "scope": "/",
+    "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "/icon-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
 }
