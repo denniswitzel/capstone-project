@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, useLocation } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import useFetch from '../src/hooks/useFetch'
 import Categories from './components/Categories/Categories'
@@ -7,6 +7,7 @@ import ProductDetail from './components/ProductDetail/ProductDetail'
 import ProductList from './components/ProductList/ProductList'
 import { ReactComponent as Logo } from './images/icons/planternate-logo.svg'
 import { categories } from './services/categories'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function App() {
   const products = {
@@ -19,11 +20,23 @@ export default function App() {
 
   const [favorites, setFavorites] = useState(loadLocally('favorites') ?? [])
 
+  const pageTransitions = {
+    in: {
+      opacity: 1,
+      y: 0
+    },
+    out: {
+      opacity: 0,
+      y: 30
+    }
+  }
+
   useEffect(() => {
     saveLocally('favorites', favorites)
   }, [favorites])
 
   return (
+    <AnimatePresence exitBeforeEnter>
     <Switch>
       <Route exact path="/">
         <LogoStyled />
@@ -36,25 +49,27 @@ export default function App() {
       <Route exact path={path} key={name}>
         <ProductList headline={name}
           product={products[name]}
+          pageTransitions={pageTransitions}
         />
       </Route>
       ))}
 
       {categories.map(({name, path}) => (
       <Route path={`${path}/:id`} key={name}>
-        <ProductDetail product={products[name]} onFavoriteClick={toggleFavorite} favorites={favorites}/>
+        <ProductDetail pageTransitions={pageTransitions} product={products[name]} onFavoriteClick={toggleFavorite} favorites={favorites}/>
       </Route>
       ))}
 
       <Route path="/favorites">
-        {favorites.length ? <ProductList headline={'Favorites'} product={favorites.sort((a, b) => a.title.localeCompare(b.title))}/> 
+        {favorites.length ? <ProductList pageTransitions={pageTransitions} headline={'Favorites'} product={favorites.sort((a, b) => a.title.localeCompare(b.title))}/> 
         : <>
-        <ProductList headline={'Favorites'}/>
+        <ProductList pageTransitions={pageTransitions} headline={'Favorites'}/>
         <StyledHeadline>You have no favorites</StyledHeadline>
         </>
         }
       </Route>
     </Switch>
+    </AnimatePresence>
   )
   
   function toggleFavorite(favorite) {
