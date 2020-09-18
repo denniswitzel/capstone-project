@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductList renders correctly 1`] = `
+exports[`Header renders correctly 1`] = `
 <section
   className="sc-AxjAm cmCotq"
 >
@@ -16,9 +16,7 @@ exports[`ProductList renders correctly 1`] = `
     CATEGORY NAME
   </h2>
   <svg
-    active="false"
     className="sc-AxhCb drMDeW"
-    onClick={[Function]}
   >
     filter.svg
   </svg>

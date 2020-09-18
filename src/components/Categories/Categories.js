@@ -4,16 +4,16 @@ import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types'
 
 Categories.propTypes = { 
-    productIcon: PropTypes.node,
-    productName: PropTypes.string,
+    categoryIcon: PropTypes.node,
+    categoryName: PropTypes.string,
 }
 
-export default function Categories({productIcon, productName}) {
+export default function Categories({categoryIcon, categoryName}) {
     return (    
-        <NavLinkStyled to={productName.toLowerCase()}>
+        <NavLinkStyled to={categoryName}>
         <ProductCategory>
-            <ProductIcon src={productIcon} alt={productName}/>
-            <ProductName>{productName}</ProductName>
+            <ProductIcon src={categoryIcon} alt={categoryName}/>
+            <ProductName>{categoryName.toUpperCase()}</ProductName>
         </ProductCategory>
         </NavLinkStyled>
     )
@@ -42,9 +42,9 @@ const ProductCategory = styled.div`
     display: flex;
     border: 2px solid #4BDB80;
     border-radius: 20px 0 20px 20px;
-    width: 151px;
-    height: 143px;
-    margin: 15px 0 15px 0;
+    width: 40vw;
+    height: 19vh;
+    margin: 1vh 0 1vh 0;
     padding: 25px 0;
     flex-direction: column;
     justify-content: space-evenly;

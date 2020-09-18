@@ -1,14 +1,12 @@
 import React from 'react'
-import ProductList from './ProductList'
+import Product from '../Products/Product'
 
 export default {
   title: 'Product Lists/Multiple Products',
-  component: ProductList,
+  component: Product,
 }
 
-const headline = 'Burger'
-const category = 'burger'
-const product = [
+const products = [
   {
     id: 1,
     title: 'amidori - veggie best burger',
@@ -93,7 +91,11 @@ const product = [
 ]
 
 const Template = () => (
-  <ProductList product={product} category={category} headline={headline} />
+  <>
+  {products.map(({title, image}) => 
+  <Product title={title} image={image}/>)}
+  </>
 )
 
 export const multipleProducts = Template.bind({})
+
