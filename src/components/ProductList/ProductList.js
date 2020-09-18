@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import Header from '../Header/Header'
 import Product from '../Products/Product'
 import Filter from '../Filter/Filter'
+import styled from 'styled-components'
 
 
 
@@ -22,7 +23,7 @@ export default function ProductList({ product, headline }) {
   const history = useHistory()
 
   return (
-    <>
+    <ProductListWrapper>
       <Header headline={headline} active={filterToggle.toString()} onToggle={() => setFilterToggle(!filterToggle)}/>
       {filterToggle &&
       <Filter filters={filters} active={active} setActive={setActive}/>}
@@ -34,6 +35,12 @@ export default function ProductList({ product, headline }) {
           image={productItem.image}
         />
       ))}
-    </>
+    </ProductListWrapper>
   )
 }
+
+const ProductListWrapper = styled.section`
+    grid-column: 1/3;
+    padding-bottom: 120px;
+
+`

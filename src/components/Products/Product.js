@@ -22,7 +22,7 @@ const ProductWrapper = styled.div`
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   padding-top: 15px;
   display: inline-block;
-  margin: 25px 0 50px 0;
+  margin: 25px 15px 50px 15px;
 `
 
 const ProductName = styled.h3`
@@ -41,8 +41,4 @@ const ProductImage = styled.img`
   margin-top: 10px;
   -webkit-filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
-
-  :last-child {
-    margin-bottom: 110px;
-    }
 `

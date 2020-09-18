@@ -78,7 +78,7 @@ const ProductName = styled.h2`
   line-height: 1.5;
   color: white;
   margin: 100px 20px 30px 30px;
-  width: 45vw;
+  width: 40vw;
 `
 
 const ProductImage = styled.img`

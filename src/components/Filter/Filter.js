@@ -16,9 +16,9 @@ export default function Filter( {filters, active, setActive }) {
 
 
 const ButtonWrapper = styled.section`
-    grid-column: 1/3;
     display: flex;
     margin-bottom: 20px;
+    justify-content: center;
 `
 
 const FilterButton = styled.button`

@@ -33,17 +33,15 @@ const Header = styled.section`
   display: flex;
   grid-column: 1/3;
   margin: 20px 0;
-  text-align: center;
 `
 
 const HeadlineStyled = styled.h2`
   display: inline;
-  position: relative;
   font-weight: 300;
   color: #8e9091;
   border-bottom: 1px solid #4bdb80;
   padding-bottom: 5px;
-  margin: 0;
+  margin: 0 auto;
   max-width: 300px;
 `
 const ArrowStyled = styled(Arrow)`
