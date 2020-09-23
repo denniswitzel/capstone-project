@@ -1,12 +1,12 @@
+import { motion } from 'framer-motion'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
 import { ReactComponent as Gluten } from '../../images/icons/gluten.svg'
 import { ReactComponent as Soy } from '../../images/icons/soy.svg'
-import { ReactComponent as Heart } from '../../images/icons/heart.svg'
-import PropTypes from 'prop-types'
-
+import Rating from '../Rating/Rating'
 
 ProductDetail.propTypes = {
   product: PropTypes.array,
@@ -14,26 +14,72 @@ ProductDetail.propTypes = {
   favorites: PropTypes.array,
 }
 
-export default function ProductDetail({ product, onFavoriteClick, favorites }) {
+export default function ProductDetail({
+  product,
+  onFavoriteClick,
+  favorites,
+  pageTransitions,
+}) {
   const { id } = useParams()
-  const productItem = product?.filter(product => JSON.stringify(product.id) === id)
+
+  const productItem = product?.filter(
+    (product) => JSON.stringify(product.id) === id
+  )
   const history = useHistory()
-  
+
+  const variants = {
+    clicked: { scale: [1, 1.5, 1], x: [0, 20, 0] },
+  }
+
   function handleClick() {
     history.goBack()
   }
 
-  return (
-      <>
-    {productItem?.map((productItem) => (
-    <DetailWrapper key={productItem.id}>
+  return productItem?.map((productItem) => (
+    <DetailWrapper
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageTransitions}
+      key={productItem.id}
+    >
       <ColoredBackground>
         <ArrowStyled onClick={handleClick} />
         <ProductName>{productItem.title}</ProductName>
       </ColoredBackground>
       <ImageWrapper>
-        <ProductImage src={productItem.image} alt={productItem.title}/>
-        <HeartStyled favored={favorites?.find(favoriteItem => favoriteItem.id === productItem.id)} onClick={() => onFavoriteClick(productItem)}/>
+        <ProductImage src={productItem.image} alt={productItem.title} />
+        <HeartStyled
+          animate={
+            favorites?.find(
+              (favoriteItem) => favoriteItem.id === productItem.id
+            ) && 'clicked'
+          }
+          variants={variants}
+          favored={favorites?.find(
+            (favoriteItem) => favoriteItem.id === productItem.id
+          )}
+          onClick={() => onFavoriteClick(productItem)}
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="108.667px"
+          height="101.5px"
+          viewBox="0.063 -0.5 108.667 101.5"
+          enable-background="new 0.063 -0.5 108.667 101.5"
+        >
+          <path
+            stroke-width="8"
+            stroke-miterlimit="10"
+            d="M96.22,12.524
+              C91.047,6.964,83.799,3.801,76.205,3.79c-7.601,0.009-14.854,3.17-20.035,8.731l-1.767,1.866l-1.767-1.866
+              c-5.387-5.799-12.703-8.733-20.038-8.733c-6.662,0-13.34,2.42-18.606,7.313c-0.49,0.456-0.964,0.929-1.419,1.419
+              c-10.904,11.762-10.904,29.938,0,41.701l39.234,41.375c0.703,0.742,1.648,1.115,2.596,1.115c0.882,0,1.766-0.324,2.457-0.979
+              c0.048-0.043,0.094-0.09,0.138-0.137L96.22,54.222C107.123,42.46,107.123,24.284,96.22,12.524z"
+          />
+        </HeartStyled>
       </ImageWrapper>
       <ProductInformation>
         <Headline>Ingredients</Headline>
@@ -49,14 +95,18 @@ export default function ProductDetail({ product, onFavoriteClick, favorites }) {
             <Allergies>{allergy}</Allergies>
           </AllergyContainer>
         ))}
+        <Rating
+          category={productItem.category}
+          id={productItem._id}
+          activeRating={productItem.rating}
+          numberOfRatings={productItem.numberOfRatings}
+        />
       </ProductInformation>
     </DetailWrapper>
-    ))}
-    </>
-  )
+  ))
 }
 
-const DetailWrapper = styled.section`
+const DetailWrapper = styled(motion.section)`
   grid-column: 1/3;
 `
 
@@ -115,7 +165,7 @@ const IngredientsList = styled.p`
 
 const AllergyContainer = styled.div`
   float: left;
-  margin: 15px 30px 120px 0;
+  margin: 15px 30px 30px 0;
   text-align: center;
 
   svg {
@@ -140,14 +190,14 @@ const ArrowStyled = styled(Arrow)`
 `
 
 const ImageWrapper = styled.section`
-    float: right;
-    position: relative;
-  `
+  float: right;
+  position: relative;
+`
 
-const HeartStyled = styled(Heart)`
+const HeartStyled = styled(motion.svg)`
   width: 40px;
-  stroke: #4BDB80;
-  fill: ${({favored}) => favored ? '#4BDB80' : '#F4F4F4'};
+  stroke: #4bdb80;
+  fill: ${({ favored }) => (favored ? '#4BDB80' : '#F4F4F4')};
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   cursor: pointer;
   position: absolute;

@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
+const fetch = require('node-fetch');
 
 export default function useFetch(urlName) {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch(`https://my-json-server.typicode.com/denniswitzel/capstone-project/${urlName}`)
+    fetch(`http://localhost:5000/${urlName}`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => {

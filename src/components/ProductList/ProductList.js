@@ -5,6 +5,7 @@ import Header from '../Header/Header'
 import Product from '../Products/Product'
 import Filter from '../Filter/Filter'
 import styled from 'styled-components'
+import { motion, useCycle } from 'framer-motion'
 
 
 
@@ -15,18 +16,23 @@ ProductList.propTypes = {
   id: PropTypes.number,
 }
 
-export default function ProductList({ product, headline }) {
+export default function ProductList({ product, headline, pageTransitions }) {
   const filters = ['Show all', 'gluten', 'soy']
   const [active, setActive] = useState(filters[0])
   const [filterToggle, setFilterToggle] = useState(false)
-  
-  const history = useHistory()
 
+  const [animate, toggleFocus] = useCycle(
+    { height: 40, overflowY: "auto" },
+    { height: 0, overflowY: "hidden" }
+  )
+
+  const history = useHistory()
+  
   return (
-    <ProductListWrapper>
-      <Header headline={headline} active={filterToggle.toString()} onToggle={() => setFilterToggle(!filterToggle)}/>
+    <ProductListWrapper initial="out" animate="in" exit="out" variants={pageTransitions}>
+      <Header toggleFocus={toggleFocus} headline={headline} active={filterToggle.toString()} onToggle={() => setFilterToggle(!filterToggle)}/>
       {filterToggle &&
-      <Filter filters={filters} active={active} setActive={setActive}/>}
+      <Filter animate={animate} filters={filters} active={active} setActive={setActive}/>}
       {product?.filter(product => active === 'Show all' || !product.allergies.includes(active)).map((productItem) => (
         <Product
           onClick={() => history.push(`/${productItem.category}/${productItem.id}`)}
@@ -39,7 +45,7 @@ export default function ProductList({ product, headline }) {
   )
 }
 
-const ProductListWrapper = styled.section`
+const ProductListWrapper = styled(motion.section)`
     grid-column: 1/3;
     padding-bottom: 120px;
 

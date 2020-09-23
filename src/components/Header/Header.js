@@ -13,7 +13,7 @@ Headline.defaultProps = {
   headline: 'Category name',
 }
 
-export default function Headline({ headline, onToggle, active }) {
+export default function Headline({ headline, onToggle, active, toggleFocus }) {
   const history = useHistory()
 
   function handleClick() {
@@ -24,7 +24,7 @@ export default function Headline({ headline, onToggle, active }) {
     <Header>
       <ArrowStyled onClick={handleClick} />
       <HeadlineStyled>{headline.toUpperCase()}</HeadlineStyled>
-      <FilterStyled active={active} onClick={onToggle}/>
+      <FilterStyled active={active} onTap={() => toggleFocus()} onClick={onToggle}/>
     </Header>
   )
 }

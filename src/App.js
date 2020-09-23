@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
@@ -14,64 +15,96 @@ export default function App() {
     kebab: useFetch('kebab'),
     minced: useFetch('minced'),
     nuggets: useFetch('nuggets'),
-    sausages: useFetch('sausages')
+    sausages: useFetch('sausages'),
   }
 
   const [favorites, setFavorites] = useState(loadLocally('favorites') ?? [])
+
+  const pageTransitions = {
+    in: {
+      opacity: 1,
+      y: 0,
+    },
+    out: {
+      opacity: 0,
+      y: 30,
+    },
+  }
 
   useEffect(() => {
     saveLocally('favorites', favorites)
   }, [favorites])
 
   return (
-    <Switch>
-      <Route exact path="/">
-        <LogoStyled />
-        {categories.map(({name, icon}, index) => (
-          <Categories key={index} categoryIcon={icon} categoryName={name}/>
+    <AnimatePresence exitBeforeEnter>
+      <Switch>
+        <Route exact path="/">
+          ‚
+          <LogoStyled />
+          {categories.map(({ name, icon }, index) => (
+            <Categories key={index} categoryIcon={icon} categoryName={name} />
+          ))}
+        </Route>
+
+        {categories.map(({ name, path }) => (
+          <Route exact path={path} key={name}>
+            <ProductList
+              headline={name}
+              product={products[name]}
+              pageTransitions={pageTransitions}
+            />
+          </Route>
         ))}
-      </Route>
 
-      {categories.map(({name, path}) => (
-      <Route exact path={path} key={name}>
-        <ProductList headline={name}
-          product={products[name]}
-        />
-      </Route>
-      ))}
+        {categories.map(({ name, path }) => (
+          <Route path={`${path}/:id`} key={name}>
+            <ProductDetail
+              pageTransitions={pageTransitions}
+              product={products[name]}
+              onFavoriteClick={toggleFavorite}
+              favorites={favorites}
+            />
+          </Route>
+        ))}
 
-      {categories.map(({name, path}) => (
-      <Route path={`${path}/:id`} key={name}>
-        <ProductDetail product={products[name]} onFavoriteClick={toggleFavorite} favorites={favorites}/>
-      </Route>
-      ))}
-
-      <Route path="/favorites">
-        {favorites.length ? <ProductList headline={'Favorites'} product={favorites.sort((a, b) => a.title.localeCompare(b.title))}/> 
-        : <>
-        <ProductList headline={'Favorites'}/>
-        <StyledHeadline>You have no favorites</StyledHeadline>
-        </>
-        }
-      </Route>
-    </Switch>
+        <Route path="/favorites">
+          {favorites.length ? (
+            <ProductList
+              pageTransitions={pageTransitions}
+              headline={'Favorites'}
+              product={favorites.sort((a, b) => a.title.localeCompare(b.title))}
+            />
+          ) : (
+            <>
+              <ProductList
+                pageTransitions={pageTransitions}
+                headline={'Favorites'}
+              />
+              <StyledHeadline>You have no favorites</StyledHeadline>
+            </>
+          )}
+        </Route>
+      </Switch>
+    </AnimatePresence>
   )
-  
+
   function toggleFavorite(favorite) {
-    const index = favorites.findIndex(favoriteItem => favoriteItem.id === favorite.id)
-    index > -1 ? 
-    setFavorites([
-      ...favorites.slice(0, index),
-      ...favorites.slice(index + 1),
-    ]) : 
-    setFavorites([...favorites, { ...favorite }])
+    const index = favorites.findIndex(
+      (favoriteItem) => favoriteItem.id === favorite.id
+    )
+    index > -1
+      ? setFavorites([
+          ...favorites.slice(0, index),
+          ...favorites.slice(index + 1),
+        ])
+      : setFavorites([...favorites, { ...favorite }])
   }
 
   function saveLocally(key, arrayOfObjects) {
     localStorage.setItem(key, JSON.stringify(arrayOfObjects))
   }
-  
-function loadLocally(key) {
+
+  function loadLocally(key) {
     try {
       const jsonString = localStorage.getItem(key)
       return JSON.parse(jsonString)
@@ -79,7 +112,6 @@ function loadLocally(key) {
       console.log(error)
     }
   }
-  
 }
 
 const LogoStyled = styled(Logo)`
@@ -92,5 +124,5 @@ const StyledHeadline = styled.h2`
   grid-column: 1/3;
   margin-top: 100px;
   font-weight: 300;
-  color: #4BDB80;
+  color: #4bdb80;
 `
