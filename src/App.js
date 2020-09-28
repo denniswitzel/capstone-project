@@ -1,5 +1,5 @@
-import { AnimatePresence } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
+import { useCookies } from 'react-cookie'
 import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import useFetch from '../src/hooks/useFetch'
@@ -8,121 +8,88 @@ import ProductDetail from './components/ProductDetail/ProductDetail'
 import ProductList from './components/ProductList/ProductList'
 import { ReactComponent as Logo } from './images/icons/planternate-logo.svg'
 import { categories } from './services/categories'
+import { loadLocally, saveLocally } from './services/localStorage'
+import RatingList from './components/RatingList/RatingList'
 
 export default function App() {
-  const products = {
-    burger: useFetch('burger'),
-    kebab: useFetch('kebab'),
-    minced: useFetch('minced'),
-    nuggets: useFetch('nuggets'),
-    sausages: useFetch('sausages'),
-  }
+  const [cookies, setCookies] = useCookies(['user'])
 
-  const [favorites, setFavorites] = useState(loadLocally('favorites') ?? [])
+  const burger = useFetch('burger')
+  const kebab = useFetch('kebab')
+  const minced = useFetch('minced')
+  const nuggets = useFetch('nuggets')
+  const sausages = useFetch('sausages')
 
-  const pageTransitions = {
-    in: {
-      opacity: 1,
-      y: 0,
-    },
-    out: {
-      opacity: 0,
-      y: 30,
-    },
-  }
+  const [products, setProducts] = useState(loadLocally('products') ?? [])
 
   useEffect(() => {
-    saveLocally('favorites', favorites)
-  }, [favorites])
+    setProducts(burger.concat(kebab, minced, nuggets, sausages))
+  }, [burger, kebab, minced, nuggets, sausages])
+
+  useEffect(() => {
+    saveLocally('products', products)
+  }, [products])
+
+  useEffect(() => {
+    cookies.user ?? setCookies('user', Math.floor(Math.random() * Math.floor(5000)), { path: '/'})
+    // eslint-disable-next-line
+  }, [])
+
+
 
   return (
-    <AnimatePresence exitBeforeEnter>
       <Switch>
         <Route exact path="/">
-          ‚
           <LogoStyled />
           {categories.map(({ name, icon }, index) => (
             <Categories key={index} categoryIcon={icon} categoryName={name} />
           ))}
         </Route>
-
         {categories.map(({ name, path }) => (
           <Route exact path={path} key={name}>
             <ProductList
               headline={name}
-              product={products[name]}
-              pageTransitions={pageTransitions}
+              product={products.filter((p) => p.category === name)}
             />
           </Route>
         ))}
-
         {categories.map(({ name, path }) => (
           <Route path={`${path}/:id`} key={name}>
             <ProductDetail
-              pageTransitions={pageTransitions}
-              product={products[name]}
+              product={products.filter((p) => p.category === name)}
               onFavoriteClick={toggleFavorite}
-              favorites={favorites}
+              cookies={cookies.user}
             />
           </Route>
         ))}
-
         <Route path="/favorites">
-          {favorites.length ? (
-            <ProductList
-              pageTransitions={pageTransitions}
-              headline={'Favorites'}
-              product={favorites.sort((a, b) => a.title.localeCompare(b.title))}
-            />
-          ) : (
-            <>
-              <ProductList
-                pageTransitions={pageTransitions}
-                headline={'Favorites'}
-              />
-              <StyledHeadline>You have no favorites</StyledHeadline>
-            </>
-          )}
+          <ProductList
+            headline={'Favorites'}
+            product={products
+              .filter((p) => p.isFavorite)
+              .sort((a, b) => a.title.localeCompare(b.title))}
+          />
+        </Route>
+        <Route path="/rating">
+          <RatingList product={products}/>
         </Route>
       </Switch>
-    </AnimatePresence>
   )
 
   function toggleFavorite(favorite) {
-    const index = favorites.findIndex(
+    const index = products.findIndex(
       (favoriteItem) => favoriteItem.id === favorite.id
     )
-    index > -1
-      ? setFavorites([
-          ...favorites.slice(0, index),
-          ...favorites.slice(index + 1),
-        ])
-      : setFavorites([...favorites, { ...favorite }])
-  }
-
-  function saveLocally(key, arrayOfObjects) {
-    localStorage.setItem(key, JSON.stringify(arrayOfObjects))
-  }
-
-  function loadLocally(key) {
-    try {
-      const jsonString = localStorage.getItem(key)
-      return JSON.parse(jsonString)
-    } catch (error) {
-      console.log(error)
-    }
+    setProducts([
+      ...products.slice(0, index),
+      { ...favorite, isFavorite: !favorite.isFavorite },
+      ...products.slice(index + 1),
+    ])
   }
 }
 
 const LogoStyled = styled(Logo)`
   width: 60vw;
   grid-column: 1/3;
-  margin: 40px 0;
-`
-
-const StyledHeadline = styled.h2`
-  grid-column: 1/3;
-  margin-top: 100px;
-  font-weight: 300;
-  color: #4bdb80;
+  margin: 30px 0 30px 0;
 `

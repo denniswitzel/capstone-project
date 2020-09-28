@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-const fetch = require('node-fetch');
 
 export default function useFetch(urlName) {
   const [data, setData] = useState([])
@@ -11,6 +10,7 @@ export default function useFetch(urlName) {
       .catch((error) => {
         console.error('Data could not be loaded. Error:', error)
       })
+      // eslint-disable-next-line
   }, [urlName])
 
   return data.sort((a, b) => a.title.localeCompare(b.title))

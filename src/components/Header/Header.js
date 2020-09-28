@@ -13,7 +13,7 @@ Headline.defaultProps = {
   headline: 'Category name',
 }
 
-export default function Headline({ headline, onToggle, active, toggleFocus }) {
+export default function Headline({ headline, onToggle, active }) {
   const history = useHistory()
 
   function handleClick() {
@@ -24,7 +24,7 @@ export default function Headline({ headline, onToggle, active, toggleFocus }) {
     <Header>
       <ArrowStyled onClick={handleClick} />
       <HeadlineStyled>{headline.toUpperCase()}</HeadlineStyled>
-      <FilterStyled active={active} onTap={() => toggleFocus()} onClick={onToggle}/>
+      <FilterStyled active={active} onClick={onToggle}/>
     </Header>
   )
 }
@@ -47,13 +47,13 @@ const HeadlineStyled = styled.h2`
 const ArrowStyled = styled(Arrow)`
   fill: #8E9091;
   position: absolute;
-  left: 10%;
+  left: 8%;
   margin-top: 10px;
   cursor: pointer;
 `
 const FilterStyled = styled(Filter)`
   position: absolute;
-  right: 50px;
+  right: 8%;
   margin-top: 10px;
   cursor: pointer;
   stroke: ${({active}) => active === 'true' ? '#4BDB80' : '#8E9091'};

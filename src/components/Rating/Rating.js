@@ -1,22 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Star } from '../../images/icons/star.svg'
+import { resetRating, submitRating } from '../../services/rating'
 
-export default function Rating({
-  category,
-  id,
-  activeRating,
-  numberOfRatings,
-}) {
-
-    const localStorageData = loadLocally('rating')?.filter((product) => product.id === id) ?? []
-    const [rating, setRating] = useState(localStorageData[0]?.rating ?? 0)
-    const [active, setActive] = useState(localStorageData[0]?.active ?? false)
-    const [localRating, setLocalRating] = useState(loadLocally('rating') ?? [])
-    
-    useEffect(() => {
-        saveLocally('rating', localRating)
-      }, [localRating])
+export default function Rating({ category, id, activeRating, cookies }) {
+  const findSession = activeRating
+  .filter(rated => rated.session_id === cookies)
+  .map(rated => rated.rating)
+  const [rating, setRating] = useState(findSession.length ? findSession : 0)
+  const [active, setActive] = useState(findSession.length ? true : false)
+  const [responseData, setResponseData] = useState(activeRating)
 
   return (
     <RatingSection>
@@ -32,65 +25,43 @@ export default function Rating({
         </IconButton>
       ))}
       {!active ? (
-        <ButtonStyled inactive={active} onClick={() => {submitRating()}}>
+        <ButtonStyled
+          inactive={active}
+          onClick={() =>
+            submitRating(
+              category,
+              id,
+              responseData,
+              rating,
+              setResponseData,
+              setActive,
+              active,
+              cookies
+            )
+          }
+        >
           Set rating
         </ButtonStyled>
       ) : (
-        <ButtonStyled inactive={active} onClick={() => resetRating()}>
+        <ButtonStyled
+          inactive={active}
+          onClick={() =>
+            resetRating(
+              category,
+              id,
+              responseData,
+              setResponseData,
+              rating,
+              setActive,
+              active
+            )
+          }
+        >
           Change rating
         </ButtonStyled>
       )}
     </RatingSection>
   )
-
-  function submitRating() {
-    setActive(!active)
-    fetch(`http://localhost:5000/${category}/${id}`, {
-      method: 'PATCH',
-      body: JSON.stringify({
-        rating: activeRating + rating,
-        numberOfRatings: numberOfRatings + 1,
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-      .then((response) => response.json())
-      .catch((err) => 'Error' + err)
-      setActive(!active)
-      setLocalRating([...localRating, {id, rating, active: true}])
-  }
-
-  function resetRating() {
-    setActive(!active)
-    fetch(`http://localhost:5000/${category}/${id}`, {
-      method: 'PATCH',
-      body: JSON.stringify({
-        rating: activeRating - rating,
-        numberOfRatings: numberOfRatings - 1,
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-      .then((response) => response.json())
-      .catch((err) => 'Error' + err)
-    setRating(1)
-  }
-
-  function saveLocally(key, arrayOfObjects) {
-    localStorage.setItem(key, JSON.stringify(arrayOfObjects))
-  }
-
-
-  function loadLocally(key) {
-    try {
-      const jsonString = localStorage.getItem(key)
-      return JSON.parse(jsonString)
-    } catch (error) {
-      console.log(error)
-    }
-  }
 }
 
 const RatingSection = styled.section`

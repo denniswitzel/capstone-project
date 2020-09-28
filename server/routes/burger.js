@@ -16,7 +16,7 @@ router.get('/:id', async (req, res) => {
 })
 
 router.patch('/:id', async (req, res) => {
-    await Burger.updateOne({_id: req.params.id}, { $set: { rating: req.body.rating, numberOfRatings: req.body.numberOfRatings}})
+    await Burger.updateOne({_id: req.params.id}, { $set: { rating: req.body.rating }})
     .then(burgerUpdate => res.json(burgerUpdate))
     .catch(err => res.status(400).json('Error: ' + err))
 })

@@ -24,6 +24,7 @@ const ButtonWrapper = styled(motion.section)`
 `
 
 const FilterButton = styled(motion.button)`
+    height: 35px;
     width: 25vw;
     border: 2px solid #4BDB80;
     color: ${({active}) => active ? '#FFFFFF' : '#4BDB80'};

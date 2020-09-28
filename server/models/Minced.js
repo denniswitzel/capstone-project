@@ -6,8 +6,7 @@ const MincedSchema = mongoose.Schema({
     ingredients: String,
     allergies: [String],
     image: String,
-    rating: Number,
-    numberOfRatings: Number,
+    rating: Array
 })
 
 export default mongoose.model('minced', MincedSchema, 'minced')
