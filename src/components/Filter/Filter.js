@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export default function Filter( {filters, active, setActive }) {
+export default function Filter( {filters, active, setActive, animate }) {
+    
     return (
-    <ButtonWrapper>
+    <ButtonWrapper >
     {filters.map((filter) => (
-    <FilterButton key={filter} active={active === filter} onClick={() => activeFilter(filter)}>{filter.includes('all') ? filter : 'Hide ' + filter}</FilterButton>))}
+    <FilterButton animate={animate} key={filter} active={active === filter} onClick={() => activeFilter(filter)}>{filter.includes('all') ? filter : 'Hide ' + filter}</FilterButton>))}
     </ButtonWrapper>
     )
 
@@ -15,15 +17,15 @@ export default function Filter( {filters, active, setActive }) {
 }
 
 
-const ButtonWrapper = styled.section`
+const ButtonWrapper = styled(motion.section)`
     display: flex;
     margin-bottom: 20px;
     justify-content: center;
 `
 
-const FilterButton = styled.button`
-    width: 25vw;
+const FilterButton = styled(motion.button)`
     height: 35px;
+    width: 25vw;
     border: 2px solid #4BDB80;
     color: ${({active}) => active ? '#FFFFFF' : '#4BDB80'};
     border-radius: 20px;

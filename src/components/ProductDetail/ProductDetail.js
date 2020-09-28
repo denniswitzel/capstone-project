@@ -1,12 +1,13 @@
+import { motion } from 'framer-motion'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
 import { ReactComponent as Gluten } from '../../images/icons/gluten.svg'
-import { ReactComponent as Soy } from '../../images/icons/soy.svg'
 import { ReactComponent as Heart } from '../../images/icons/heart.svg'
-import PropTypes from 'prop-types'
-
+import { ReactComponent as Soy } from '../../images/icons/soy.svg'
+import Rating from '../Rating/Rating'
 
 ProductDetail.propTypes = {
   product: PropTypes.array,
@@ -14,26 +15,34 @@ ProductDetail.propTypes = {
   favorites: PropTypes.array,
 }
 
-export default function ProductDetail({ product, onFavoriteClick, favorites }) {
+export default function ProductDetail({
+  product,
+  onFavoriteClick,
+  cookies
+}) {
   const { id } = useParams()
-  const productItem = product?.filter(product => JSON.stringify(product.id) === id)
+
+  const productItem = product?.filter(
+    (product) => JSON.stringify(product.id) === id
+  )
   const history = useHistory()
-  
+
   function handleClick() {
     history.goBack()
   }
 
-  return (
-      <>
-    {productItem?.map((productItem) => (
+  return productItem?.map((productItem) => (
     <DetailWrapper key={productItem.id}>
       <ColoredBackground>
         <ArrowStyled onClick={handleClick} />
         <ProductName>{productItem.title}</ProductName>
       </ColoredBackground>
       <ImageWrapper>
-        <ProductImage src={productItem.image} alt={productItem.title}/>
-        <HeartStyled favored={favorites?.find(favoriteItem => favoriteItem.id === productItem.id)} onClick={() => onFavoriteClick(productItem)}/>
+        <ProductImage src={productItem.image} alt={productItem.title} />
+        <HeartStyled
+          favored={productItem.isFavorite ? 1 : 0}
+          onClick={() => onFavoriteClick(productItem)}
+         />
       </ImageWrapper>
       <ProductInformation>
         <Headline>Ingredients</Headline>
@@ -49,14 +58,19 @@ export default function ProductDetail({ product, onFavoriteClick, favorites }) {
             <Allergies>{allergy}</Allergies>
           </AllergyContainer>
         ))}
+        <Rating
+          category={productItem.category}
+          id={productItem._id}
+          activeRating={productItem.rating}
+          numberOfRatings={productItem.numberOfRatings}
+          cookies={cookies}
+        />
       </ProductInformation>
     </DetailWrapper>
-    ))}
-    </>
-  )
+  ))
 }
 
-const DetailWrapper = styled.section`
+const DetailWrapper = styled(motion.section)`
   grid-column: 1/3;
 `
 
@@ -115,7 +129,7 @@ const IngredientsList = styled.p`
 
 const AllergyContainer = styled.div`
   float: left;
-  margin: 15px 30px 120px 0;
+  margin: 15px 30px 30px 0;
   text-align: center;
 
   svg {
@@ -140,14 +154,14 @@ const ArrowStyled = styled(Arrow)`
 `
 
 const ImageWrapper = styled.section`
-    float: right;
-    position: relative;
-  `
+  float: right;
+  position: relative;
+`
 
 const HeartStyled = styled(Heart)`
   width: 40px;
-  stroke: #4BDB80;
-  fill: ${({favored}) => favored ? '#4BDB80' : '#F4F4F4'};
+  stroke: #4bdb80;
+  fill: ${({ favored }) => (favored ? '#4BDB80' : '#F4F4F4')};
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   cursor: pointer;
   position: absolute;

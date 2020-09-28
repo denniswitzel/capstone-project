@@ -1,10 +1,11 @@
+import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import styled from 'styled-components'
+import Filter from '../Filter/Filter'
 import Header from '../Header/Header'
 import Product from '../Products/Product'
-import Filter from '../Filter/Filter'
-import styled from 'styled-components'
 
 
 
@@ -19,9 +20,9 @@ export default function ProductList({ product, headline }) {
   const filters = ['Show all', 'gluten', 'soy']
   const [active, setActive] = useState(filters[0])
   const [filterToggle, setFilterToggle] = useState(false)
-  
-  const history = useHistory()
 
+  const history = useHistory()
+  
   return (
     <ProductListWrapper>
       <Header headline={headline} active={filterToggle.toString()} onToggle={() => setFilterToggle(!filterToggle)}/>
@@ -39,7 +40,7 @@ export default function ProductList({ product, headline }) {
   )
 }
 
-const ProductListWrapper = styled.section`
+const ProductListWrapper = styled(motion.section)`
     grid-column: 1/3;
     padding-bottom: 120px;
 
