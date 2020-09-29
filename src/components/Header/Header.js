@@ -46,12 +46,12 @@ const HeadlineStyled = styled.h2`
 `
 const ArrowStyled = styled(Arrow)`
   fill: var(--grey);
-  position: relative;
+  position: absolute;
   left: 8%;
   cursor: pointer;
 `
 const FilterStyled = styled(Filter)`
-  position: relative;
+  position: absolute;
   right: 8%;
   cursor: pointer;
   stroke: ${({active}) => active === 'true' ? 'var(--green)' : 'var(--grey)'};

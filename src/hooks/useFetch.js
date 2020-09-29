@@ -4,7 +4,7 @@ export default function useFetch(urlName) {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:5000/${urlName}`)
+    fetch(`http://192.168.178.53:5000/${urlName}`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => {

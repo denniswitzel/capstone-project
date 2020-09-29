@@ -82,8 +82,8 @@ const ProductName = styled.h2`
   font-weight: 300;
   line-height: 1.5;
   color: var(--white);
-  margin: 100px 20px 30px 30px;
-  width: 170px;
+  margin: 100px 20px 30px 40px;
+  width: 100px;
 `
 
 const ProductImage = styled.img`
