@@ -7,10 +7,8 @@ import PropTypes from 'prop-types'
 
 Headline.propTypes = {
   headline: PropTypes.string,
-}
-
-Headline.defaultProps = {
-  headline: 'Category name',
+  onToggle: PropTypes.func,
+  active: PropTypes.string
 }
 
 export default function Headline({ headline, onToggle, active }) {
@@ -33,29 +31,28 @@ const Header = styled.section`
   display: flex;
   grid-column: 1/3;
   margin: 20px 0;
+  align-items: center;
 `
 
 const HeadlineStyled = styled.h2`
   display: inline;
   font-weight: 300;
-  color: #8e9091;
-  border-bottom: 1px solid #4bdb80;
+  color: var(--grey);
+  border-bottom: 1px solid var(--green);
   padding-bottom: 5px;
   margin: 0 auto;
   max-width: 300px;
 `
 const ArrowStyled = styled(Arrow)`
-  fill: #8E9091;
+  fill: var(--grey);
   position: absolute;
   left: 8%;
-  margin-top: 10px;
   cursor: pointer;
 `
 const FilterStyled = styled(Filter)`
   position: absolute;
   right: 8%;
-  margin-top: 10px;
   cursor: pointer;
-  stroke: ${({active}) => active === 'true' ? '#4BDB80' : '#8E9091'};
+  stroke: ${({active}) => active === 'true' ? 'var(--green)' : 'var(--grey)'};
   fill: transparent;
 `

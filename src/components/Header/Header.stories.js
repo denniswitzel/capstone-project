@@ -11,7 +11,7 @@ export default {
 
 const Template = (args) => <Header {...args} />;
 
-export const shortHeadline = Template.bind({});
-shortHeadline.args = {
+export const Headline = Template.bind({});
+Headline.args = {
   headline: 'Headline',
 }

@@ -1,14 +1,17 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import styled from 'styled-components'
 import { ReactComponent as Heart } from '../../images/icons/heart.svg'
 import { ReactComponent as Home } from '../../images/icons/home.svg'
 import { ReactComponent as Rating } from '../../images/icons/rating.svg'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
-
+Navigation.propTypes = {
+  disabled: PropTypes.bool
+}
 
 export default function Navigation() {
-    const {pathname} = useLocation()
+    const { pathname } = useLocation()
 
     return (
         <NavigationWrapper>
@@ -36,7 +39,7 @@ const NavigationWrapper = styled.section`
 `
 
 const NavLinkFavorite = styled(NavLink)`
-    background: ${({disabled}) => disabled ? '#4BDB80' : 'white'};
+    background: ${({disabled}) => disabled ? 'var(--green)' : 'var(--white)'};
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -47,7 +50,7 @@ const NavLinkFavorite = styled(NavLink)`
     
     
     svg {
-        fill: ${({disabled}) => disabled ? 'white' : '#4BDB80'};
+        fill: ${({disabled}) => disabled ? 'var(--white)' : 'var(--green)'};
         stroke: transparent;
         width: 40px;
         margin-top: -3px;
@@ -55,7 +58,7 @@ const NavLinkFavorite = styled(NavLink)`
     }
 `
 const NavLinkStyled = styled(NavLink)`
-    background: ${({disabled}) => disabled ? '#4BDB80' : 'white'};
+    background: ${({disabled}) => disabled ? 'var(--green)' : 'var(--white)'};
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -65,7 +68,7 @@ const NavLinkStyled = styled(NavLink)`
 
     svg {
         fill: transparent;
-        stroke: ${({disabled}) => disabled ? 'white' : '#4BDB80'};
+        stroke: ${({disabled}) => disabled ? 'var(--white)' : 'var(--green)'};
         margin-top: 18px;
     }
 `

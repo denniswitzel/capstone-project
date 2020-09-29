@@ -2,13 +2,20 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Star } from '../../images/icons/star.svg'
 import { resetRating, submitRating } from '../../services/rating'
+import PropTypes from 'prop-types'
+
+Rating.propTypes = {
+  category: PropTypes.string,
+  activeRating: PropTypes.array,
+  cookies: PropTypes.string
+}
 
 export default function Rating({ category, id, activeRating, cookies }) {
-  const findSession = activeRating
-  .filter(rated => rated.session_id === cookies)
-  .map(rated => rated.rating)
-  const [rating, setRating] = useState(findSession.length ? findSession : 0)
-  const [active, setActive] = useState(findSession.length ? true : false)
+  const findCookieSession = activeRating
+    .filter((rated) => rated.session_id === cookies)
+    .map((rated) => rated.rating)
+  const [rating, setRating] = useState(findCookieSession.length ? findCookieSession : 0)
+  const [active, setActive] = useState(findCookieSession.length ? true : false)
   const [responseData, setResponseData] = useState(activeRating)
 
   return (
@@ -65,9 +72,10 @@ export default function Rating({ category, id, activeRating, cookies }) {
 }
 
 const RatingSection = styled.section`
-  display: inline-block;
+  grid-column: 1/3;
   margin-bottom: 140px;
   text-align: center;
+  display: inline-block;
 `
 
 const StarStyled = styled(Star)`
@@ -76,11 +84,11 @@ const StarStyled = styled(Star)`
 
 const IconButton = styled.button`
   border: none;
-  fill: ${(props) => (props.marked ? '#4BDB80' : '#F4F4F4')};
-  stroke: #4bdb80;
+  fill: ${(props) => (props.marked ? 'var(--green)' : 'var(--lightgrey)')};
+  stroke: var(--green);
   background: transparent;
   padding: 0;
-  margin-left: 15px;
+  margin-right: 15px;
   margin-bottom: 20px;
   cursor: pointer;
 `
@@ -88,8 +96,10 @@ const IconButton = styled.button`
 const ButtonStyled = styled.button`
   width: 100px;
   height: 40px;
-  border: ${(props) => (props.inactive ? 'none' : '2px solid #4BDB80')};
-  color: #ffffff;
+  border: ${(props) => (props.inactive ? 'none' : '2px solid var(--green)')};
+  color: var(--white);
   border-radius: 20px;
-  background: ${(props) => (props.inactive ? '#CB4468' : '#4BDB80')};
+  background: ${(props) => (props.inactive ? '#CB4468' : 'var(--green)')};
+  display: inherit;
+  margin: 0 auto;
 `

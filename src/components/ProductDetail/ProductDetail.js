@@ -1,25 +1,20 @@
-import { motion } from 'framer-motion'
-import PropTypes from 'prop-types'
 import React from 'react'
 import { useHistory, useParams } from 'react-router-dom'
-import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../../images/icons/back-arrow.svg'
 import { ReactComponent as Gluten } from '../../images/icons/gluten.svg'
 import { ReactComponent as Heart } from '../../images/icons/heart.svg'
 import { ReactComponent as Soy } from '../../images/icons/soy.svg'
+import styled from 'styled-components'
 import Rating from '../Rating/Rating'
+import PropTypes from 'prop-types'
 
 ProductDetail.propTypes = {
   product: PropTypes.array,
   onFavoriteClick: PropTypes.func,
-  favorites: PropTypes.array,
+  cookies: PropTypes.string,
 }
 
-export default function ProductDetail({
-  product,
-  onFavoriteClick,
-  cookies
-}) {
+export default function ProductDetail({ product, onFavoriteClick, cookies }) {
   const { id } = useParams()
 
   const productItem = product?.filter(
@@ -42,7 +37,7 @@ export default function ProductDetail({
         <HeartStyled
           favored={productItem.isFavorite ? 1 : 0}
           onClick={() => onFavoriteClick(productItem)}
-         />
+        />
       </ImageWrapper>
       <ProductInformation>
         <Headline>Ingredients</Headline>
@@ -70,17 +65,13 @@ export default function ProductDetail({
   ))
 }
 
-const DetailWrapper = styled(motion.section)`
+const DetailWrapper = styled.section`
   grid-column: 1/3;
 `
 
 const ColoredBackground = styled.section`
   display: flex;
-  background: linear-gradient(
-    45deg,
-    rgba(75, 219, 164, 1) 0%,
-    rgba(75, 219, 128, 1) 100%
-  );
+  background: linear-gradient(45deg, var(--turquoise), var(--green));
   border-radius: 0 0 20px 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   width: 100vw;
@@ -90,13 +81,13 @@ const ProductName = styled.h2`
   font-size: 22px;
   font-weight: 300;
   line-height: 1.5;
-  color: white;
+  color: var(--white);
   margin: 100px 20px 30px 30px;
   width: 40vw;
 `
 
 const ProductImage = styled.img`
-  height: 180px;
+  max-width: 180px;
   text-align: center;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   margin: -120px 30px 0 20px;
@@ -108,7 +99,7 @@ const ProductInformation = styled.section`
   text-align: left;
 `
 const Headline = styled.h3`
-  color: #8e9091;
+  color: var(--grey);
   grid-column: 1/3;
   width: 100%;
   text-align: left;
@@ -138,7 +129,7 @@ const AllergyContainer = styled.div`
 `
 
 const Allergies = styled.p`
-  color: #8e9091;
+  color: var(--grey);
   font-size: 16px;
   font-weight: 300;
   text-align: left;
@@ -146,7 +137,7 @@ const Allergies = styled.p`
   text-transform: capitalize;
 `
 const ArrowStyled = styled(Arrow)`
-  fill: #ffffff;
+  fill: var(--white);
   position: absolute;
   left: 10%;
   margin-top: 30px;
@@ -160,11 +151,12 @@ const ImageWrapper = styled.section`
 
 const HeartStyled = styled(Heart)`
   width: 40px;
-  stroke: #4bdb80;
-  fill: ${({ favored }) => (favored ? '#4BDB80' : '#F4F4F4')};
+  stroke: var(--green);
+  fill: ${({ favored }) => (favored ? 'var(--green)' : 'var(--lightgrey)')};
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   cursor: pointer;
   position: absolute;
   right: 95px;
+  margin-top: -30px;
   -webkit-tap-highlight-color: transparent;
 `
