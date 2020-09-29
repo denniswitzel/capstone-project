@@ -157,6 +157,5 @@ const HeartStyled = styled(Heart)`
   cursor: pointer;
   position: absolute;
   right: 95px;
-  margin-top: -30px;
   -webkit-tap-highlight-color: transparent;
 `
