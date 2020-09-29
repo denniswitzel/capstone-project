@@ -67,6 +67,7 @@ export default function ProductDetail({ product, onFavoriteClick, cookies }) {
 
 const DetailWrapper = styled.section`
   grid-column: 1/3;
+  max-width: 500px;
 `
 
 const ColoredBackground = styled.section`
@@ -74,7 +75,6 @@ const ColoredBackground = styled.section`
   background: linear-gradient(45deg, var(--turquoise), var(--green));
   border-radius: 0 0 20px 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  width: 100vw;
   grid-column: 1/3;
 `
 const ProductName = styled.h2`
@@ -83,7 +83,7 @@ const ProductName = styled.h2`
   line-height: 1.5;
   color: var(--white);
   margin: 100px 20px 30px 30px;
-  width: 40vw;
+  width: 170px;
 `
 
 const ProductImage = styled.img`
@@ -138,7 +138,7 @@ const Allergies = styled.p`
 `
 const ArrowStyled = styled(Arrow)`
   fill: var(--white);
-  position: absolute;
+  position: relative;
   left: 10%;
   margin-top: 30px;
   cursor: pointer;
@@ -157,6 +157,5 @@ const HeartStyled = styled(Heart)`
   cursor: pointer;
   position: absolute;
   right: 95px;
-  margin-top: -30px;
   -webkit-tap-highlight-color: transparent;
 `

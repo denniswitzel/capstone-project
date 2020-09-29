@@ -76,6 +76,7 @@ const RatingSection = styled.section`
   margin-bottom: 140px;
   text-align: center;
   display: inline-block;
+  width: 100%;
 `
 
 const StarStyled = styled(Star)`
@@ -100,6 +101,6 @@ const ButtonStyled = styled.button`
   color: var(--white);
   border-radius: 20px;
   background: ${(props) => (props.inactive ? '#CB4468' : 'var(--green)')};
-  display: inherit;
+  display: block;
   margin: 0 auto;
 `

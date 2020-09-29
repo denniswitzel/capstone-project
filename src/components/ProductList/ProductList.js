@@ -39,5 +39,5 @@ export default function ProductList({ product, headline }) {
 const ProductListWrapper = styled.section`
     grid-column: 1/3;
     padding-bottom: 120px;
-
+    max-width: 400px;
 `

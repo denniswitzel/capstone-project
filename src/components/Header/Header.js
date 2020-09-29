@@ -32,6 +32,7 @@ const Header = styled.section`
   grid-column: 1/3;
   margin: 20px 0;
   align-items: center;
+  max-width: 400px;
 `
 
 const HeadlineStyled = styled.h2`
@@ -45,12 +46,12 @@ const HeadlineStyled = styled.h2`
 `
 const ArrowStyled = styled(Arrow)`
   fill: var(--grey);
-  position: absolute;
+  position: relative;
   left: 8%;
   cursor: pointer;
 `
 const FilterStyled = styled(Filter)`
-  position: absolute;
+  position: relative;
   right: 8%;
   cursor: pointer;
   stroke: ${({active}) => active === 'true' ? 'var(--green)' : 'var(--grey)'};
