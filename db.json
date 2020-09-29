@@ -446,5 +446,72 @@
             "name": "SAUSAGES",
             "icon": "https://raw.githubusercontent.com/denniswitzel/capstone-project/9672139ede702411db309c553bb4795ba2e339fa/src/images/icons/sausage.svg"
         }
-    ]
+    ],
+
+    "cold-cut": [{
+        "id": 42,
+        "category": "cold-cuts",
+        "title": "Veggy Friends Salami",
+        "ingredients": "Wasser, isoliertes SOJAeiweiß (9,16%), texturiertes SOJAeiweiß (7,17%), Rapsöl, WEIZENeiweiß (GLUTEN) (5,7%), modifizierte Stärke, Salz, Verdickungsmittel: Carrageen, Aromen, Essigpulver, GERSTEnmalzextrakt, Gewürze, Farbstoffe: Eisenoxid und Eisenhydroxid",
+        "allergies": ["gluten", "soy"],
+        "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/cold-cuts/Veggie-Friends-Salami.png",
+        "rating": [{"session_id": "1234", "rating": 2}]
+    },{
+        "id": 43,
+        "category": "cold-cuts",
+        "title": "Veggy Friends Schinken-Pfeffer",
+        "ingredients": "Wasser, isoliertes SOJAeiweiß (12,3%), Rapsöl, WEIZENeiweiß (GLUTEN) (6,85%), modifizierte Stärke, Salz, Verdickungsmittel: Carrageen und Konjak, Aromen, Essigpulver, grüner Pfeffer 0,37% (grüner Pfeffer, Wasser, Salz, Essig), Gewürzextrakte, Farbstoffe: Eisenoxid und Eisenhydroxid, GERSTEnmalzextrakt",
+        "allergies": ["gluten", "soy"],
+        "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/cold-cuts/Veggie-Friends-Schinken.png",
+        "rating": [{"session_id": "1234", "rating": 2}]
+    },{
+        "id": 44,
+        "category": "cold-cuts",
+        "title": "Hobelz Veganer Aufschnitt Rustikal",
+        "ingredients": "Wassser, Sojaprotein, Rapsöl, GLUTEN, modifizierte Stärke E 1422 (Mais), Gewürze, vegane Aromen (SOJA), Salz, Geliermittel Carrageen, Knoblauch, Citrusfaser.",
+        "allergies": ["gluten", "soy"],
+        "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/cold-cuts/Hobelz-Veganer-Aufschnitt-Rustika.png",
+        "rating": [{"session_id": "1234", "rating": 2}]
+    },{
+        "id": 44,
+        "category": "cold-cuts",
+        "title": "Berief Vegane Schinkenwurst",
+        "ingredients": "Trinkwasser, Proteinisolate 13% (SOJA 50%, Erbse), Verdickungsmittel: E 407 Carrageen, E 425 Konjak, E 410 Johannisbrotkernmehl, E 415 Xanthan, E 412 Guarkernmehl ; Rapsöl, Dextrose, Salz, Gewürze, Aromen, Gewürzextrakte (enthält SENF); Farbstoff E 172 Eisenoxide und Eisenhydroxide; Meersalz,Hefeextrakt, Knoblauch, Sonnenblumenöl.",
+        "allergies": ["soy"],
+        "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/cold-cuts/Berief-Vegane-Schinkenwurst.png",
+        "rating": [{"session_id": "1234", "rating": 2}]
+    },{
+        "id": 45,
+        "category": "cold-cuts",
+        "title": "Kato Bio Katolami Pfeffer",
+        "ingredients": "Seitan (Trinkwasser, WEIZENEIWEISS*) (59 %), Tofu (SOJABOHNEN*, Trinkwasser, Gerinnungsmittel: Magnesiumchlorid [Nigari]) (23 %), Sonnenblumenöl*, roter Gemüsepaprika*, Meersalz, Paprika*, Gewürze*, MANDELN*, Rohrohrzucker*, Tomatenmark*, Pfeffer*, Verdickungsmittel: Johannisbrotkernmehl*, Sojasauce (Trinkwasser, SOJABOHNEN*, Meersalz, WEIZEN*), Rauch *aus kontrolliert biologischem Anbau",
+        "allergies": ["gluten", "soy"],
+        "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/cold-cuts/Kato-Bio-Katolami-Pfeffer.png",
+        "rating": [{"session_id": "1234", "rating": 2}]
+    },{
+        "id": 46,
+        "category": "cold-cuts",
+        "title": "Kato Bio Katolami Paprika",
+        "ingredients": "Seitan (Trinkwasser, WEIZENEIEISS*) (49 %), Tofu (SOJABOHNEN*, Trinkwasser, Gerinnungsmittel: Magnesiumchlorid [Nigari]) (29 %), Sonnenblumenöl*, roter Gemüsepaprika* (5 %), Gewürze*, Meersalz, Rohrohrzucker*, Verdickungsmittel: Johannisbrotkernmehl*, Tomatenmark*, SELLERIE*, Rauch * aus kontrolliert biologischem Anbau",
+        "allergies": ["gluten", "soy"],
+        "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/cold-cuts/Kato-Bio-Katolami-Paprika.png",
+        "rating": [{"session_id": "1234", "rating": 2}]
+    },{
+        "id": 47,
+        "category": "cold-cuts",
+        "title": "Veganer Schinken Spicker Grillgemüse",
+        "ingredients": "Trinkwasser, Rapsöl, 12% Grillgemüse (67% Paprika, 33% Zucchini), Verdickungsmittel: Carrageen, verarbeitete Euchema-Algen, Johannisbrotkernmehl, Konjak; 2% Erbsenproteinisolat, natürliches Aroma, Kochsalz, Kartoffelprotein, Traubenzucker, Glucosesirup, Branntweinessig, 0,3% Kräuter, Gewürze, Farbstoffe: Anthocyane, Carotine",
+        "allergies": [],
+        "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/cold-cuts/Veganer-Schinken-Spicker-mit-Grillgemuse.png",
+        "rating": [{"session_id": "1234", "rating": 2}]
+    },{
+        "id": 48,
+        "category": "cold-cuts",
+        "title": "Vegane Mühlen Salami",
+        "ingredients": "Trinkwasser, Rapsöl, 6% WEIZENGLUTEN, Aroma, Verdickungsmittel: Carrageen, Konjak, Methylcellulose; Kochsalz, Kartoffelprotein, 1,6% WEIZENMEHL, Gewürze, Traubenzucker, Citrusfasern, Farbstoffe: Eisenoxide, Carotine",
+        "allergies": ["gluten"],
+        "image": "https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/cold-cuts/Vegane-Muhlen-Salami.png",
+        "rating": [{"session_id": "1234", "rating": 2}]
+    }]
+
 }

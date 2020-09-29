@@ -1,6 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Star } from '../../images/icons/star.svg'
+import PropTypes from 'prop-types'
+
+Product.propTypes = {
+  title: PropTypes.string,
+  image: PropTypes.string,
+  rating: PropTypes.string,
+  onClick: PropTypes.func
+}
 
 export default function Product({ title, image, rating, onClick }) {
   return (
@@ -16,11 +24,7 @@ export default function Product({ title, image, rating, onClick }) {
 }
 
 const ProductWrapper = styled.div`
-  background: linear-gradient(
-    45deg,
-    rgba(75, 219, 164, 1) 0%,
-    rgba(75, 219, 128, 1) 100%
-  );
+  background: linear-gradient(45deg, var(--turquoise), var(--green));
   border-radius: 20px 0 20px 20px;
   width: 151px;
   height: 143px;
@@ -31,7 +35,7 @@ const ProductWrapper = styled.div`
 `
 
 const ProductName = styled.h3`
-  color: white;
+  color: var(--white);
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -55,13 +59,13 @@ const RatingWrapper = styled.div`
 `
 const StyledRating = styled.p`
     font-size: 14px;
-    color: #8e9091;
+    color: var(--grey);
     margin: 0 0 0 10px;  
     float: left;
 `
 
 const StyledStar = styled(Star)`
-  fill: #4BDB80;
+  fill: var(--green);
   height: 20px;
   float: left;
 `

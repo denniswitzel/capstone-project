@@ -40,7 +40,7 @@ const NavLinkStyled = styled(NavLink)`
 
 const ProductCategory = styled.div`
     display: flex;
-    border: 2px solid #4BDB80;
+    border: 2px solid var(--green);
     border-radius: 20px 0 20px 20px;
     width: 40vw;
     height: 19vh;
@@ -53,7 +53,7 @@ const ProductIcon = styled.img`
     margin-bottom: 10px;
 `
 const ProductName = styled.h2`
-    color: #8E9091;
+    color: var(--grey);
     font-size: 16px;
     font-weight: 300;
     margin: 0;

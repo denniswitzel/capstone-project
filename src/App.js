@@ -15,6 +15,7 @@ export default function App() {
   const [cookies, setCookies] = useCookies(['user'])
 
   const burger = useFetch('burger')
+  const coldCuts = useFetch('cold-cuts')
   const kebab = useFetch('kebab')
   const minced = useFetch('minced')
   const nuggets = useFetch('nuggets')
@@ -23,57 +24,58 @@ export default function App() {
   const [products, setProducts] = useState(loadLocally('products') ?? [])
 
   useEffect(() => {
-    setProducts(burger.concat(kebab, minced, nuggets, sausages))
-  }, [burger, kebab, minced, nuggets, sausages])
+    setProducts(burger.concat(coldCuts, kebab, minced, nuggets, sausages))
+  }, [burger, coldCuts, kebab, minced, nuggets, sausages])
 
   useEffect(() => {
     saveLocally('products', products)
   }, [products])
 
   useEffect(() => {
-    cookies.user ?? setCookies('user', Math.floor(Math.random() * Math.floor(5000)), { path: '/'})
+    cookies.user ??
+      setCookies('user', Math.floor(Math.random() * Math.floor(5000)), {
+        path: '/',
+      })
     // eslint-disable-next-line
   }, [])
 
-
-
   return (
-      <Switch>
-        <Route exact path="/">
-          <LogoStyled />
-          {categories.map(({ name, icon }, index) => (
-            <Categories key={index} categoryIcon={icon} categoryName={name} />
-          ))}
-        </Route>
-        {categories.map(({ name, path }) => (
-          <Route exact path={path} key={name}>
-            <ProductList
-              headline={name}
-              product={products.filter((p) => p.category === name)}
-            />
-          </Route>
+    <Switch>
+      <Route exact path="/">
+        <LogoStyled />
+        {categories.map(({ name, icon }, index) => (
+          <Categories key={index} categoryIcon={icon} categoryName={name} />
         ))}
-        {categories.map(({ name, path }) => (
-          <Route path={`${path}/:id`} key={name}>
-            <ProductDetail
-              product={products.filter((p) => p.category === name)}
-              onFavoriteClick={toggleFavorite}
-              cookies={cookies.user}
-            />
-          </Route>
-        ))}
-        <Route path="/favorites">
+      </Route>
+      {categories.map(({ name, path }) => (
+        <Route exact path={path} key={name}>
           <ProductList
-            headline={'Favorites'}
-            product={products
-              .filter((p) => p.isFavorite)
-              .sort((a, b) => a.title.localeCompare(b.title))}
+            headline={name}
+            product={products.filter((p) => p.category === name)}
           />
         </Route>
-        <Route path="/rating">
-          <RatingList product={products}/>
+      ))}
+      {categories.map(({ name, path }) => (
+        <Route path={`${path}/:id`} key={name}>
+          <ProductDetail
+            product={products.filter((p) => p.category === name)}
+            onFavoriteClick={toggleFavorite}
+            cookies={cookies.user}
+          />
         </Route>
-      </Switch>
+      ))}
+      <Route path="/favorites">
+        <ProductList
+          headline={'Favorites'}
+          product={products
+            .filter((p) => p.isFavorite)
+            .sort((a, b) => a.title.localeCompare(b.title))}
+        />
+      </Route>
+      <Route path="/rating">
+        <RatingList product={products} />
+      </Route>
+    </Switch>
   )
 
   function toggleFavorite(favorite) {

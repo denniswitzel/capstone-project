@@ -21,4 +21,12 @@ body {
     text-align: center;
     justify-items: center;
 }
+
+:root {
+    --green: #4BDB80;
+    --turquoise: #4BDBA4;
+    --grey: #8E9091;
+    --lightgrey: #F4F4F4;
+    --white: #FFFFFF;
+  }
 `

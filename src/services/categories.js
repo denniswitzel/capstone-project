@@ -7,7 +7,7 @@ export const categories = [
     {
         name: "cold-cuts",
         icon: "https://raw.githubusercontent.com/denniswitzel/capstone-project/717acadfd943ecc6bfc7f09650784cf00ff22b44/src/images/icons/coldcuts.svg",
-        path: "/coldcuts"
+        path: "/cold-cuts"
     },
     {
         name: "kebab",

@@ -1,19 +1,15 @@
-import { motion } from 'framer-motion'
-import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import Filter from '../Filter/Filter'
 import Header from '../Header/Header'
 import Product from '../Products/Product'
-
-
+import PropTypes from 'prop-types'
 
 ProductList.propTypes = {
   title: PropTypes.string,
   image: PropTypes.string,
-  category: PropTypes.string,
-  id: PropTypes.number,
+  category: PropTypes.string
 }
 
 export default function ProductList({ product, headline }) {
@@ -40,7 +36,7 @@ export default function ProductList({ product, headline }) {
   )
 }
 
-const ProductListWrapper = styled(motion.section)`
+const ProductListWrapper = styled.section`
     grid-column: 1/3;
     padding-bottom: 120px;
 

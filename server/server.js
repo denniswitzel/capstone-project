@@ -3,6 +3,7 @@ import cors from 'cors'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import burgerRoute from './routes/burger.js'
+import coldCutsRoute from './routes/coldCuts.js'
 import kebabRoute from './routes/kebab.js'
 import mincedRoute from './routes/minced.js'
 import nuggetsRoute from './routes/nuggets.js'
@@ -18,6 +19,7 @@ server.use(cors())
 server.use(express.json())
 
 server.use('/burger', burgerRoute)
+server.use('/cold-cuts', coldCutsRoute)
 server.use('/kebab', kebabRoute)
 server.use('/minced', mincedRoute)
 server.use('/nuggets', nuggetsRoute)
