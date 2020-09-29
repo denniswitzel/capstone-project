@@ -2,12 +2,12 @@ import express from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
-import burgerRoute from './routes/burger.js'
-import coldCutsRoute from './routes/coldCuts.js'
-import kebabRoute from './routes/kebab.js'
-import mincedRoute from './routes/minced.js'
-import nuggetsRoute from './routes/nuggets.js'
-import sausagesRoute from './routes/sausages.js'
+import burgerRoute from './api/burger.js'
+import coldCutsRoute from './api/coldCuts.js'
+import kebabRoute from './api/kebab.js'
+import mincedRoute from './api/minced.js'
+import nuggetsRoute from './api/nuggets.js'
+import sausagesRoute from './api/sausages.js'
 
 
 dotenv.config()
