@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/readme.jpg" alt="readme-image"/>
+<img src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/readme-planternate.jpg" alt="readme"/>
 
 
 In the project directory, you can run:
