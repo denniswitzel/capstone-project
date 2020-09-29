@@ -43,6 +43,7 @@ const ProductCategory = styled.div`
     border: 2px solid var(--green);
     border-radius: 20px 0 20px 20px;
     width: 40vw;
+    max-width: 300px;
     height: 19vh;
     margin: 1vh 0 1vh 0;
     padding: 25px 0;

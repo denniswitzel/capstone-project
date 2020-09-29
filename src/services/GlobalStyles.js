@@ -12,7 +12,6 @@ body {
     background: #F4F4F4;
     margin: 0;
     padding: 0;
-    
 }
 
 #root {
