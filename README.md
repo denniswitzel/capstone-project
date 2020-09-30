@@ -1,5 +1,6 @@
 <img src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/readme-planternate.jpg" alt="readme"/>
 
+<h2 align="center"><span style="color:lightgrey;">FINISHED RESULT</span></h2>
 <p align="center">
 <img src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/ezgif-6-bbf99b4b45c5.gif" alt="readme"/>
 </p>
