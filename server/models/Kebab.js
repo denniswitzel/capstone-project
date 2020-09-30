@@ -4,7 +4,7 @@ const KebabSchema = mongoose.Schema({
     category: String,
     title: String,
     ingredients: String,
-    allergies: [String],
+    allergies: Array,
     image: String,
     rating: Array
 })
