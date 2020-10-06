@@ -1,6 +1,12 @@
 <img src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/readme-planternate.jpg" alt="readme"/>
 
+<h2 align="center"><span style="color:lightgrey;">FINISHED RESULT</span></h2><br/>
+<p align="center">
+<img src="https://raw.githubusercontent.com/denniswitzel/capstone-project/master/src/images/ezgif-6-bbf99b4b45c5.gif" alt="readme"/>
+</p>
 
+<br />
+<br />
 In the project directory, you can run:
 
 ### `npm start`
