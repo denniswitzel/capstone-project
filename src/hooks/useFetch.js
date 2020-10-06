@@ -4,7 +4,7 @@ export default function useFetch(urlName) {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch(`http://my-json-server.typicode.com/denniswitzel/capstone-project/${urlName}`)
+    fetch(`https://my-json-server.typicode.com/denniswitzel/capstone-project/${urlName}`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => {
