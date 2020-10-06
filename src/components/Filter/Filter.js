@@ -13,7 +13,7 @@ export default function Filter( {filters, active, setActive }) {
 
     return (
     <ButtonWrapper >
-    {filters.map((filter) => (
+    {filters?.map((filter) => (
     <FilterButton key={filter} active={active === filter} onClick={() => activeFilter(filter)}>{filter.includes('all') ? filter : 'Hide ' + filter}</FilterButton>))}
     </ButtonWrapper>
     )

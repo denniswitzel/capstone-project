@@ -2,25 +2,27 @@
 
 exports[`ProductList renders correctly 1`] = `
 <section
-  className="sc-AxjAm cmCotq"
+  className="sc-fzplWN ehPxTb"
 >
-  <svg
-    className="sc-AxiKw ixfOfj"
-    onClick={[Function]}
+  <section
+    className="sc-AxiKw dmdrCS"
   >
-    back-arrow.svg
-  </svg>
-  <h2
-    className="sc-AxirZ sqNNI"
-  >
-    CATEGORY NAME
-  </h2>
-  <svg
-    active="false"
-    className="sc-AxhCb drMDeW"
-    onClick={[Function]}
-  >
-    filter.svg
-  </svg>
+    <svg
+      className="sc-AxhUy gikrmK"
+      onClick={[Function]}
+    >
+      back-arrow.svg
+    </svg>
+    <h2
+      className="sc-AxhCb hyOHYX"
+    />
+    <svg
+      active="false"
+      className="sc-AxgMl dCMMYF"
+      onClick={[Function]}
+    >
+      filter.svg
+    </svg>
+  </section>
 </section>
 `;

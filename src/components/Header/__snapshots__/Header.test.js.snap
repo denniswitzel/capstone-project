@@ -2,21 +2,19 @@
 
 exports[`Header renders correctly 1`] = `
 <section
-  className="sc-AxjAm cmCotq"
+  className="sc-AxjAm jRGLJZ"
 >
   <svg
-    className="sc-AxiKw ixfOfj"
+    className="sc-AxiKw jcUDjX"
     onClick={[Function]}
   >
     back-arrow.svg
   </svg>
   <h2
-    className="sc-AxirZ sqNNI"
-  >
-    CATEGORY NAME
-  </h2>
+    className="sc-AxirZ jgYDSb"
+  />
   <svg
-    className="sc-AxhCb drMDeW"
+    className="sc-AxhCb FeAGO"
   >
     filter.svg
   </svg>

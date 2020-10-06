@@ -2,10 +2,13 @@ import React from 'react';
 import Header from './Header'
 
 export default {
-  title: 'Product Lists/Header',
+  title: 'Components/Header',
   component: Header,
   argTypes: {
-  headline: { control: 'text'},
+    headline: { control: {
+      type: 'select',
+      options: ['Burger', 'Cold Cuts', 'Kebab', 'Minced', 'Nuggets', 'Sausages']
+    }}
   },
 };
 
@@ -13,5 +16,5 @@ const Template = (args) => <Header {...args} />;
 
 export const Headline = Template.bind({});
 Headline.args = {
-  headline: 'Headline',
+  headline: 'Burger'
 }

@@ -43,14 +43,14 @@ export default function App() {
     <Switch>
       <Route exact path="/">
         <LogoStyled />
-        {categories.map(({ name, icon }, index) => (
+        {categories?.map(({ name, icon }, index) => (
           <Categories key={index} categoryIcon={icon} categoryName={name} />
         ))}
       </Route>
       {categories.map(({ name, path }) => (
         <Route exact path={path} key={name}>
           <ProductList
-            headline={name}
+            headline={name.toLocaleUpperCase()}
             product={products.filter((p) => p.category === name)}
           />
         </Route>

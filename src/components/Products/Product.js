@@ -54,6 +54,7 @@ const ProductImage = styled.img`
 
 const RatingWrapper = styled.div`
   display: flex;
+  align-items: end;
   justify-content: center;
   margin-top: 5px;  
 `

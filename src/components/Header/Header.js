@@ -13,7 +13,6 @@ Headline.propTypes = {
 
 export default function Headline({ headline, onToggle, active }) {
   const history = useHistory()
-
   function handleClick() {
     history.goBack()
   }
@@ -21,7 +20,7 @@ export default function Headline({ headline, onToggle, active }) {
   return (
     <Header>
       <ArrowStyled onClick={handleClick} />
-      <HeadlineStyled>{headline.toUpperCase()}</HeadlineStyled>
+      <HeadlineStyled>{headline}</HeadlineStyled>
       <FilterStyled active={active} onClick={onToggle}/>
     </Header>
   )
