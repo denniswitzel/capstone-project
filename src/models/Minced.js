@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const MincedSchema = mongoose.Schema({
     category: String,
@@ -9,4 +9,4 @@ const MincedSchema = mongoose.Schema({
     rating: Array
 })
 
-export default mongoose.model('minced', MincedSchema, 'minced')
+module.exports = mongoose.model('minced', MincedSchema, 'minced')

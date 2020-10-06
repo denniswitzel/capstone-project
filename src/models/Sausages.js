@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const SausagesSchema = mongoose.Schema({
     category: String,
@@ -9,4 +9,4 @@ const SausagesSchema = mongoose.Schema({
     rating: Array
 })
 
-export default mongoose.model('sausages', SausagesSchema, 'sausages')
+module.exports = mongoose.model('sausages', SausagesSchema, 'sausages')

@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const ColdCutsSchema = mongoose.Schema({
     category: String,
@@ -9,4 +9,4 @@ const ColdCutsSchema = mongoose.Schema({
     rating: Array
 })
 
-export default mongoose.model('cold-cuts', ColdCutsSchema, 'cold-cuts')
+module.exports = mongoose.model('cold-cuts', ColdCutsSchema, 'cold-cuts')

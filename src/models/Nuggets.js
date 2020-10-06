@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const NuggetsSchema = mongoose.Schema({
     category: String,
@@ -9,4 +9,4 @@ const NuggetsSchema = mongoose.Schema({
     rating: Array
 })
 
-export default mongoose.model('nuggets', NuggetsSchema, 'nuggets')
+module.exports = mongoose.model('nuggets', NuggetsSchema, 'nuggets')

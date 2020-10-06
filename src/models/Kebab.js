@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const KebabSchema = mongoose.Schema({
     category: String,
@@ -9,4 +9,4 @@ const KebabSchema = mongoose.Schema({
     rating: Array
 })
 
-export default mongoose.model('kebab', KebabSchema, 'kebab')
+module.exports = mongoose.model('kebab', KebabSchema, 'kebab')
